@@ -1,0 +1,42 @@
+<view class="title flex">
+  <text wx:if="{{result == 0}}">您没有通过第二次面试</text>
+  <text wx:if="{{result == 1}}">您通过了所有面试!</text>
+</view>
+
+<view class="mainBody0 flex" wx:if="{{result == 0}}">
+  <view class="detail">非常感谢你选择了青年传媒中心</view>
+  <view class="detail">但是很遗憾，你没能通过我们的面试</view>
+  <view class="detail" style="height: 35rpx"></view>
+  <view class="detail">每年我们都不得不在众多优秀的面试者中</view>
+  <view class="detail">做出艰难的取舍</view>
+  <view class="detail">我们真心地希望你能够充实愉快地度过大学生活</view>
+  <view class="detail">大学路漫漫，此刻才刚刚开始</view>
+  <view class="detail">希望你保持乐观的心态</view>
+  <view class="detail">积极地参加各种活动来锻炼自己</view>
+  <view class="detail" style="height: 35rpx"></view>
+  <view class="detail" style="color: #ffb400">加油！！！</view>
+</view>
+
+<block wx:if="{{result == 1}}">
+  <view class="image flex">
+    <image src="../../images/forward.svg" mode="heightFix" />
+  </view>
+
+  <view class="mainBody flex">
+    <view class="detail">从现在起，你就是青年传媒中心{{depArray[dep]}}的一员了</view>
+    <view class="detail">在这么多组织中选择了青媒</view>
+    <view class="detail">真的让我们很感动(✪ω✪)</view>
+    <view class="detail" style="margin-bottom: 50rpx; color: #ffb400">赶快长按复制下方的联系方式加入对应的群聊吧</view>
+
+    <view class="detail" wx:if="{{dep == 1}}"><text selectable="{{true}}">{{group[0]}}</text></view>
+    <view class="detail" wx:if="{{dep == 2}}"><text selectable="{{true}}">{{group[1]}}</text></view>
+    <view class="detail" wx:if="{{dep == 3}}"><text selectable="{{true}}">{{group[2]}}</text></view>
+    <view class="detail" wx:if="{{dep == 4}}"><text selectable="{{true}}">{{group[3]}}</text></view>
+    <view class="detail" wx:if="{{dep == 5}}"><text selectable="{{true}}">{{group[4]}}</text></view>
+    <view class="detail" wx:if="{{dep == 6}}"><text selectable="{{true}}">{{group[5]}}</text></view>
+  </view>
+</block>
+
+<view class="flex">
+  <view class="button" bindtap="switchBack">返回上一级</view>
+</view>

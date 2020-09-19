@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/signup/signup",
+    "pages/signup-info/signup-info",
+    "pages/signup-qrcode/signup-qrcode",
+    "pages/signup-first/signup-first",
+    "pages/signup-second/signup-second",
+    "pages/signup-result/signup-result",
+    "pages/help/help",
+    "pages/about/about",
+    "pages/myself/myself",
+    "pages/contact/contact",
+    "pages/develop/develop",
+    "pages/peing/peing",
+    "pages/error/error",
+    "pages/admin/admin",
+    "pages/admin-help/admin-help",
+    "pages/admin-excel/admin-excel",
+    "pages/admin-list/admin-list",
+    "pages/admin-scan/admin-scan",
+    "pages/admin-details/admin-details",
+    "pages/console/console"
+  ],
+  "window": {
+    "backgroundColor": "#fee183",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fee183",
+    "navigationBarTitleText": "南工青媒 招新小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "loading": "components/loading/loading"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

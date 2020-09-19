@@ -1,0 +1,41 @@
+<view class="help">
+	<view class="out">
+		<view><text>请严格按照相关说明进行操作，不要进行自己不清楚的操作，否则将产生严重的错误</text></view>
+
+		<view class="title">扫码</view>
+		<view>● 轻按<text>「Scan QR」</text>即可进入扫描页面，在扫描页面<text>长按屏幕</text>即可开始扫描</view>
+		<view>● 请只扫描<text>由本小程序产生的二维码</text>，扫描其他二维码均会产生错误</view>
+
+		<view class="title">列表</view>
+		<view>● 轻按<text>「List」</text>即可进入列表页面</view>
+		<view>● 列表的生成需要一些时间，请耐心等待</view>
+		<view>● 滑动上方滑动条可以进行<text>部门筛选</text>或<text>「更多」条件筛选</text></view>
+		<view>● 上方输入框可以进行<text>按姓名查找</text>，查找时请注意上方滚动条对应部门</view>
+		<view>● 「更多」条件筛选中，<text>「预约时间筛选」</text>和<text>「审核状态筛选」</text>均对应后方提示的阶段</view>
+		<view>● 被高亮(star)的用户会在列表页被<text>显示为橙色</text>，关于star请详见下方「详情页」</view>
+		<view>● 从其他页面返回列表时，<text>列表不会自动刷新</text>，若有需要可重新进入列表页</view>
+
+		<view class="title">详情页</view>
+		<view>● 详情页<text>上半部分左右滑动</text>可查看该用户完整资料</view>
+		<view>● <text>轻按</text>右上角头像可高亮(star)该用户，<text>长按</text>右上角头像可取消高亮</view>
+		<view>● <text>「记录」</text>：显示该用户以往的评价/审核信息，包括记录人/时间/阶段/种类/详情等信息</view>
+		<view>● <text>「评价」</text>：相当于面试时的笔记本，<text>只产生记录，不会改变该用户现在的状态</text></view>
+		<view>● <text>「审核」</text>：产生该用户该阶段最终的审核结果，<text>会立即改变该用户现在的状态</text>，新的审核操作会<text>覆盖之前的结果</text>，请谨慎操作</view>
+
+		<view class="title">Download Excel</view>
+		<view>● <text>请确保您与合作成员使用的表格为相同版本</text>，表格第一行记录了表格生成者和生成时间</view>
+		<view>● <text>「复制链接」</text>可复制服务器上保存的最新Excel的下载链接，若无信息变动，推荐使用本功能获取Excel</view>
+		<view>● <text>「更新表格」</text>可更新服务器上的表格至最新数据，并复制下载链接，请不要频繁使用该功能。重复获取同样的表格请使用「复制链接」</view>
+
+		<view class="title">Upload Excel</view>
+		<view>● <text>禁止上传不符合下列条件的表格，否则将产生严重的错误</text></view>
+		<image src="../../images/excelhelp.png" mode="widthFix" style="width: 100%"></image>
+		<view>● 表格第一行无需修改，每一列需要严格修改为上图样式，即id/姓名/信息审核状态/一面状态/二面状态/部门调剂状态</view>
+		<view>● 第一列id值禁止修改，其他不需要修改的内容请保持原样或清空</view>
+		<view>● 信息审核状态/一面状态/二面状态，若未通过请在对应单元格请输入「未通过审核」，通过则输入「通过审核」</view>
+		<view>● 部门调剂状态，若需要调剂请输入「被调剂至xx部」，例如输入「被调剂至事务企划部」</view>
+		<view>● 上传表格请一次只上传一个部门，请将其他工作表删除</view>
+		<view>● 每一次上传都会留有包含上传人/上传时间的记录，请谨慎操作</view>
+		<view>● 上传的文件只能来自于微信中和其他人的聊天记录，禁止将相关数据发表到除工作群以外的任何场所</view>
+	</view>
+</view>

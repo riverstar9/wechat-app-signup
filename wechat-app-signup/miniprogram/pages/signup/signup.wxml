@@ -1,0 +1,76 @@
+<view class="timeline">
+    <view class="first point {{animate1}}" id="0" bindtap="switchSwiper">
+      <text>信息填写</text>
+    </view>
+    <view class="line" wx:for="{{5}}" wx:key="index"></view>
+    <view class="second point {{animate2}}" id="1" bindtap="switchSwiper">
+      <text>信息审核</text>
+    </view>
+    <view class="line" wx:for="{{5}}" wx:key="index"></view>
+    <view class="third point {{animate3}}" id="2" bindtap="switchSwiper">
+      <text>一次面试</text>
+    </view>
+    <view class="line" wx:for="{{5}}" wx:key="index"></view>
+    <view class="fourth point {{animate4}}" id="3" bindtap="switchSwiper">
+      <text>二次面试</text>
+    </view>
+</view>
+
+<view class="help">
+  <view>※ 请左右滑动查看完整流程及相关指引</view>
+  <view>更多的帮助信息请回到首页轻按「报名帮助」</view>
+</view>
+
+<swiper class="swiper" bindchange="swiperChange" current="{{scrollToCurrent}}">
+  <swiper-item>
+    <view class="stepName">信息填写
+      <view class="stepNum">STEP<text>01</text></view>
+    </view>
+    <view class="stepText">
+      <image src="../../images/tips.svg"></image>
+      <view>信息填写完毕后只有<text>一次</text>修改机会 请确保信息无误</view>
+      <view>若还需修改 请移步个人信息页<text>联系管理员</text></view>
+    </view>
+    <image class="stepImage" src="../../images/signup1.svg" mode="heightFix"></image>
+    <view class="stepButton" bindtap="switch2Info">填写个人信息</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="stepName">信息审核
+      <view class="stepNum">STEP<text>02</text></view>
+    </view>
+    <view class="stepText">
+      <image src="../../images/tips.svg"></image>
+      <view>信息审核结果将以<text>微信服务通知</text>的形式发送给您</view>
+      <view>请<text>轻按下方按钮</text>查询信息审核结果</view>
+      <view>若通过则会邀请您<text>参加第一次面试</text></view>
+    </view>
+    <image class="stepImage" src="../../images/signup2.svg" mode="heightFix"></image>
+    <view class="stepButton" bindtap="switch2First">信息审核结果</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="stepName">第一次面试
+      <view class="stepNum">STEP<text>03</text></view>
+    </view>
+    <view class="stepText">
+      <image src="../../images/tips.svg"></image>
+      <view>第一次面试结果将以<text>微信服务通知</text>的形式发送给您</view>
+      <view>请<text>轻按下方按钮</text>查询第一次面试结果</view>
+      <view>若通过则会邀请您<text>参加第二次面试</text></view>
+    </view>
+    <image class="stepImage" src="../../images/signup3.svg" mode="heightFix"></image>
+    <view class="stepButton" bindtap="switch2Second">查询一面结果</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="stepName">第二次面试
+      <view class="stepNum">STEP<text>04</text></view>
+    </view>
+    <view class="stepText">
+      <image src="../../images/tips.svg"></image>
+      <view>第二次面试结果将以<text>微信服务通知</text>的形式发送给您</view>
+      <view>请<text>轻按下方按钮</text>查询第二次面试结果</view>
+      <view>若通过则代表您<text>正式加入青年传媒中心</text></view>
+    </view>
+    <image class="stepImage" src="../../images/signup4.svg" mode="heightFix"></image>
+    <view class="stepButton" bindtap="switch2Result">查询二面结果</view>
+  </swiper-item>
+</swiper>

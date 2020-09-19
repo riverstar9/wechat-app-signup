@@ -1,0 +1,109 @@
+Page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 200rpx;
+  left: 70rpx;
+  height: 400rpx;
+  width: 230rpx;
+  opacity: 0.8;
+  z-index: 99;
+}
+
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: white;
+  border: 12rpx solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 200rpx;
+  right: 27rpx;
+  background-size: cover;
+	background-position: center;
+}
+
+.avatar:after{
+  content: "";
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #ffb400;
+  border-radius: 50%;
+  position: absolute;
+  top: 12rpx;
+  left: -25rpx;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.buttons>view {
+  width: 440rpx;
+  height: 95rpx;
+  background-color: white;
+  border: 11rpx solid black;
+  font-size: 58rpx;
+  font-weight: 900;
+  letter-spacing: 4rpx;
+  line-height: 95rpx;
+  padding-left: 20rpx;
+  position: absolute;
+}
+
+.buttons>view:before {
+  content: "";
+  width: 500rpx;
+  height: 95rpx;
+  background-color: #ffb400;
+  position: absolute;
+  top: 28rpx;
+  left: -33rpx;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.button-hover {
+  color: rgba(0, 0, 0, 0.7)
+}
+
+.buttons .admin {
+  bottom: 810rpx;
+  right: -152rpx;
+}
+
+.buttons .signup {
+  bottom: 620rpx;
+  right: -152rpx;
+}
+
+.buttons .help {
+  bottom: 430rpx;
+  right: -82rpx;
+}
+
+.buttons .about {
+  bottom: 240rpx;
+  right: -12rpx;
+}
+
+.tips{
+  position: absolute;
+  bottom: 90rpx;
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.message {
+  width: 270rpx !important;
+  border-radius: 16rpx !important;
+  background-color: #ffb400 !important;
+  box-shadow: none !important;
+  /* font-size: 30rpx !important; */
+}

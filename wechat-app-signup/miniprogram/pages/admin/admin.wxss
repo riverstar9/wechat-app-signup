@@ -1,0 +1,38 @@
+Page {
+  background-color: #a3daff;
+  font-weight: 900;
+}
+
+.out {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  font-size: 100rpx;
+  color: white;
+}
+
+.help {
+  background-color: #a3daff;
+}
+
+.excel {
+  background-color: #66c1ff;
+}
+
+.list {
+  background-color: #1aa3ff;
+}
+
+.scan {
+  height: 500rpx;
+  background-color: #007acc;
+}

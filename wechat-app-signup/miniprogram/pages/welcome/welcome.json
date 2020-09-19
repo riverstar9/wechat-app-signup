@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-transition": "../../dist/transition/index",
+    "l-dialog": "../../dist/dialog/index",
+    "l-toast": "../../dist/toast/index"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+}

@@ -1,0 +1,125 @@
+<view wx:if="{{showPage}}" class='container'>
+  <l-segment
+    l-header-class="header"
+    even="{{false}}"
+    scrollable="{{true}}"
+    animated-for-line="{{true}}"
+    active-color="#0080ff"
+    bind:linchange="switchTab" >
+    <l-segment-item key="0" tab="所有部门" />
+    <l-segment-item key="1" tab="事务企划部" />
+    <l-segment-item key="2" tab="采编部" />
+    <l-segment-item key="3" tab="新媒体部" />
+    <l-segment-item key="4" tab="技术部" />
+    <l-segment-item key="5" tab="摄影部" />
+    <l-segment-item key="6" tab="素质拓展部" />
+    <l-segment-item key="7" tab="更多" />
+  </l-segment>
+
+  <l-input
+    placeholder="输入文字进行姓名搜索"
+    hide-label="{{true}}"
+    clear="true"
+    l-class="search"
+    bind:lininput="search" />
+    
+  <l-index-list
+    scroll-top="{{scrollTop}}"
+    l-anchor-class="l-anchor-class"
+    l-selected-class="l-selected-class"
+    l-tip-class="l-tip-class"
+    style="width:100%"
+    sidebar-data="{{sideBarData}}"
+    l-sidebar-class="sidebar-class"
+    l-tip-text-class="l-tip-text-class"
+    is-stick="true">
+    <block wx:for="{{sideBarData.length}}" wx:key="index" wx:for-index="anchorIndex">
+      <l-index-anchor />
+      <!-- <l-index-anchor>{{sideBarData[anchorIndex]}}</l-index-anchor> -->
+      <block wx:for="{{listData[anchorIndex].length}}" wx:key="index" wx:for-index="itemIndex">
+        <view class="person-item" id="{{listData[anchorIndex][itemIndex].id}}" bindtap="switch2Details">
+          <image lazy-load="{{true}}" class="person-avatar" src="{{listData[anchorIndex][itemIndex].userAvatar}}"></image>
+          <view style="margin-left: 20rpx;">
+            <view class="person-name" id="{{listData[anchorIndex][itemIndex].star}}">{{listData[anchorIndex][itemIndex].username}}</view>
+            <!-- <view class="person-name">{{listData[anchorIndex][itemIndex]}}</view> -->
+            <view class="person-details" id="{{listData[anchorIndex][itemIndex].star}}">{{depArray1[listData[anchorIndex][itemIndex].dep1]}} / {{depArray2[listData[anchorIndex][itemIndex].dep2]}}</view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </l-index-list>
+
+  <l-arc-popup
+    show="{{popupShow}}"
+    transition="{{true}}"
+    direction="top"
+    locked="{{true}}"
+    maxHeight="1100"
+    minHeight="200"
+    arcRadius="0"
+    opacity="0.4"
+    z-index="999"
+    l-panel-class="{{panelClass}}">
+
+  <form bindsubmit="sortList">
+	  <view slot="header" class="popup-header">
+      <text>选择筛选条件</text>
+      <button id="submit" plain="{{true}}" form-type="submit">提交</button>
+		</view>
+
+    <view class="popup-title">部门筛选</view>
+      <radio-group name="dep">
+        <radio
+          wx:for="{{sortItem1}}"
+          wx:key="id"
+          key="{{item.id}}"
+          value="{{item.value}}"
+          checked="{{item.isChecked}}"
+          color="#0080ff"><text>{{item.name}}</text></radio>
+      </radio-group>
+
+      <block wx:if="{{appStatus == 2 || appStatus == 3}}">
+      <view class="popup-title">预约时间筛选<text>当前阶段:{{statusArray[appStatus-1]}}</text></view>
+      <radio-group name="time">
+        <radio
+          wx:for="{{sortItem3}}"
+          wx:key="id"
+          key="{{item.id}}"
+          value="{{item.value}}"
+          checked="{{item.isChecked}}"
+          color="#0080ff"><text>{{item.name}}</text></radio>
+      </radio-group>
+      </block>
+
+      <view class="popup-title">审核状态筛选<text>当前阶段:{{statusArray[appStatus-1]}}</text></view>
+      <radio-group name="status">
+        <radio
+          wx:for="{{sortItem2}}"
+          wx:key="id"
+          key="{{item.id}}"
+          value="{{item.value}}"
+          checked="{{item.isChecked}}"
+          color="#0080ff"><text>{{item.name}}</text></radio>
+      </radio-group>
+
+      <view class="popup-title">审核历史筛选</view>
+      <radio-group name="evaluate">
+        <radio
+          wx:for="{{sortItem4}}"
+          wx:key="id"
+          key="{{item.id}}"
+          value="{{item.value}}"
+          checked="{{item.isChecked}}"
+          color="#0080ff"><text>{{item.name}}</text></radio>
+      </radio-group>
+  </form>
+	</l-arc-popup>
+
+  <view class="top-container" bindtap="backToTop">
+    <image src='../../images/top.svg' class='top-img'></image>
+  </view>
+</view>
+
+<view wx:else>
+  <l-loading show="{{true}}" type="rotate" size="large" color="#0080ff" full-screen="{{true}}" bg-color="#a3daff"/>
+</view>

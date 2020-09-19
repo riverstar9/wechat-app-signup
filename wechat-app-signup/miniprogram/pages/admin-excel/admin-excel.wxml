@@ -1,0 +1,21 @@
+<swiper indicator-dots="true" indicator-color="rgba(0,128,255,0.5)" indicator-active-color="#0080ff">
+  <swiper-item>
+    <view class="title download">
+      <view>Download</view>
+      <view>⇩ Excel</view>
+    </view>
+    <view class="button download">
+      <view bindtap="copyFileUrl">复制链接</view>
+      <view bindtap="createExcel">更新表格</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="title upload">
+      <view>Upload</view>
+      <view>Excel ⇧</view>
+    </view>
+    <view class="button upload">
+      <view bindtap="uploadExcel">上传表格</view>
+    </view>
+  </swiper-item>
+</swiper>

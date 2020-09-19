@@ -1,0 +1,156 @@
+<view class="box">
+  <view>* 使用了<text>Lin UI</text>实现部分组件功能，包括对话框、加载提示、索引列表等</view>
+  <view>* 欢迎页的设计方案参考了<text>晓峰音乐公社</text>2019年<text>星巢音乐节</text>海报的设计，背景地图来自<text>高德开放平台</text></view>
+  <view>* 首页的设计方案参考了<text>CHUN TSENG KUO</text>发布在Dribbble的设计</view>
+  <view>* 部分插画来自于<text>manypixels</text></view>
+  <view>* 联系管理员页插画来自<text>さざ波 小波</text>的<text>わに</text><text style="color: gainsboro;">（其实是管理员常用的头像）</text></view>
+  <view>* 使用了<text>yingye</text>的<text>weapp-qrcode</text>实现二维码生成功能</view>
+  <view>* 二维码保存功能参考了<text>_conquer_</text>的简书文章和<text>来了就走下去</text>的CSDN文章</view>
+  <view>* 使用了<text>Iamlars</text>的<text>pinyin</text>实现获取首字母功能</view>
+  <view>* Excel导出和读取功能参考了<text>编程小石头</text>的文章</view>
+</view>
+
+<l-steps direction="column" dot="{{true}}" color="#ffb400">
+  <l-step title="0.6.0 2020.9.18">
+    <view class="container" slot="describe">
+      <view>1.修改了二维码的描述文案并增加了关闭按钮</view>
+      <view>2.修改了报名帮助页面的背景颜色</view>
+      <view>3.修改了联系管理员页内容的获取方式</view>
+      <view>4.增加管理员页新入口</view>
+    </view>
+  </l-step>
+  <l-step title="正式上线 开始第一轮公开测试 2020.9.17" />
+  <l-step title="0.5.2 2020.9.16">
+    <view class="container" slot="describe">
+      <view>1.重做了个人信息页</view>
+      <view>2.补充文案/完善报名帮助页/完善管理员帮助页</view>
+      <view>3.增加了关于调剂的提示信息</view>
+    </view>
+  </l-step>
+  <l-step title="0.5.1 2020.9.6">
+    <view class="container" slot="describe">
+      <view>1.删除冗余代码/优化代码结构/统一配色</view>
+      <view>2.优化报名流程页切换逻辑</view>
+      <view>3.完善了匿名提问箱</view>
+    </view>
+  </l-step>
+  <l-step title="0.5.0 2020.9.5">
+    <view class="container" slot="describe">
+      <view>1.订阅消息功能来了</view>
+      <view>2.新增匿名提问箱</view>
+      <view>3.管理员可以在详情页快速复制内容和跳转电话了</view>
+    </view>
+  </l-step>
+  <l-step title="0.4.1 2020.8.25">
+    <view class="container" slot="describe">
+      <view>1.修改了获取相册权限失败时的对话框样式</view>
+    </view>
+  </l-step>
+  <l-step title="0.4.0 2020.8.23">
+    <view class="container" slot="describe">
+      <view>1.修复了iOS上的一些显示问题</view>
+      <view>2.把设置错的学院改了过来</view>
+      <view>3.修复了管理员生成的excel预约时间错误问题</view>
+      <view>4.新增了管理员上传下载excel时的署名</view>
+    </view>
+  </l-step>
+  <l-step title="0.3.3 2020.8.21">
+    <view class="container" slot="describe">
+      <view>1.修复部分元素在16:9分辨率下的显示问题</view>
+      <view>2.添加管理员扫码时的简易验证功能</view>
+      <view>3.补全了一些文案</view>
+      <view>4.在联系管理员页添加了彩蛋</view>
+    </view>
+  </l-step>
+  <l-step title="0.3.2 2020.8.21">
+    <view class="container" slot="describe">
+      <view>1.修复长按二维码保存图片功能</view>
+      <view>2.继续修复管理员列表页筛选功能</view>
+    </view>
+  </l-step>
+  <l-step title="0.3.1 2020.8.21">
+    <view class="container" slot="describe">
+      <view>1.调整了欢迎页动画速度</view>
+      <view>2.修复管理员列表页筛选功能</view>
+      <view>3.优化信息拉取和首页的刷新动画</view>
+    </view>
+  </l-step>
+  <l-step title="0.3.0 2020.8.20">
+    <view class="container" slot="describe">
+      <view>1.添加了欢迎页的动画</view>
+      <view>2.报名流程页的标题可以按了</view>
+    </view>
+  </l-step>
+  <l-step title="开始第二轮内部测试 2020.8.20" />
+  <l-step title="0.2.1 2020.8.19">
+    <view class="container" slot="describe">
+      <view>1.又重新设计了管理员主页</view>
+      <view>2.修复填写信息页籍贯过长的显示问题</view>
+      <view>3.重做管理员信息页、管理员扫描页、所有上传云函数、欢迎页</view>
+      <view>4.优化管理员上传excel的调剂操作</view>
+      <view>5.新增管理员star功能和筛选评价历史功能</view>
+    </view>
+  </l-step>
+    <l-step title="0.2.0 2020.8.14">
+    <view class="container" slot="describe">
+      <view>1.修复个人信息页管理员入口</view>
+      <view>2.重新设计管理员主页</view>
+      <view>3.新增填写信息页中文姓名的验证</view>
+      <view>4.管理员生成excel时同时生成备份文件</view>
+      <view>5.修复管理员列表分组功能和搜索功能</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.6 2020.8.13">
+    <view class="container" slot="describe">
+      <view>1.修复长按保存二维码</view>
+      <view>2.新增关于小程序页</view>
+      <view>3.新增联系管理员页</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.5 2020.8.13">
+    <view class="container" slot="describe">
+      <view>1.优化首页下拉刷新样式</view>
+      <view>2.新增长按保存二维码</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.4 2020.8.6">
+    <view class="container" slot="describe">
+      <view>1.新增首页下拉刷新</view>
+      <view>2.新增面试页提交成功对话框</view>
+      <view>3.优化后续阶段新用户访问的错误提示</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.3 2020.8.5">
+    <view class="container" slot="describe">
+      <view>1.新增填写信息页错误验证</view>
+      <view>2.优化个人信息页和错误提示页排版</view>
+      <view>3.修改报名流程页文案</view>
+      <view>4.新增授权失败对话框</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.2 2020.8.4">
+    <view class="container" slot="describe">
+      <view>1.修复填写信息页的问题</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.1 2020.8.4">
+    <view class="container" slot="describe">
+      <view>1.修复个人信息页二维码显示方式</view>
+      <view>2.修复流程页跳转逻辑</view>
+      <view>3.优化第二次填写信息时的显示方式</view>
+    </view>
+  </l-step>
+  <l-step title="0.1.0 2020.8.4">
+    <view class="container" slot="describe">
+      <view>第一个全功能内测版</view>
+      <view>1.完全由微信小程序实现的报名+审核系统，即开即用，无需安装app</view>
+      <view>2.全新的界面设计，拥有独特的排版方式和简洁明了的设计语言</view>
+      <view>3.完整的用户端报名流程，包括流程图、信息填写、面试二维码、结果查询、面试时间预约等内容</view>
+      <view>4.完整的管理员端操作，包括可筛选的信息列表、扫码查询、excel导出等内容</view>
+      <view>5.拥有丰富的动画效果和优雅的跳转方式</view>
+    </view>
+  </l-step>
+  <l-step title="开始编程 2020.7.10" />
+  <l-step title="开始设计 2020.7.3" />
+  <l-step title="立项 收集灵感 2020.6" />
+</l-steps>

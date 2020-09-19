@@ -1,0 +1,139 @@
+<view class="header {{showDetails?'short':'tall'}}">
+	<view class="qrcode flex">
+		<block wx:if="{{isAdmin == 1}}">
+			<view class="adminButton" bindtap="switch2Admin">
+				<image src="../../images/admin.svg" mode="widthFix" style="width: 300rpx"></image>
+			</view>
+		</block>
+		<block wx:if="{{status != 11 && isAdmin == -1}}">
+			<view style="height: {{myQRcodeHeight*1.2}}px;" bindlongpress="getShareImg">
+				<canvas style="width: {{myQRcodeWidth}}px; height: {{myQRcodeHeight}}px; {{showMyQRcode}}" canvas-id="myQRcode"></canvas>
+				<!-- <view>{{userDetails.username}}的二维码</view> style="background-image:url('../../images/admin.svg');-->
+			</view>
+			<view>※ 面试时请出示本二维码</view>
+			<view>长按可保存二维码至相册</view>
+		</block>
+	</view>
+	<view class="avatar" style="background-image:url({{avatarUrl}});" bindtap="showDetails"></view>
+	<view class="userName">{{nickName}}</view>
+	<view class="status {{showDetails?'off':''}}">
+		<block wx:if="{{status == 11}}">
+			<view>您还没有进行信息填写</view>
+			<view>请移步至「首页-加入青媒」进行信息填写</view>
+		</block>
+		<block wx:if="{{status == 12}}">
+			<view class="info">您填写的信息正在审核中</view>
+			<view class="info">您还有一次修改的机会 请确认所填信息正确</view>
+		</block>
+		<block wx:if="{{status == 13}}">
+			<view class="info">您填写的信息正在审核中</view>
+			<view class="info">请耐心等待审核结果</view>
+		</block>
+		<block wx:if="{{status == 21}}">
+			<view class="info">很遗憾 您的信息没能通过审核</view>
+			<view class="info">大学路漫漫 此刻才刚刚开始 加油！！！</view>
+		</block>
+		<block wx:if="{{status == 22}}">
+			<view class="info">恭喜您 通过了信息审核环节</view>
+			<view class="info">请移步至「首页-加入青媒」选择第一次面试时间</view>
+		</block>
+		<block wx:if="{{status == 23}}">
+			<view class="info">恭喜您 通过了信息审核环节</view>
+			<view class="info">请耐心等待第一次面试</view>
+		</block>
+		<block wx:if="{{status == 31}}">
+			<view class="info">很遗憾 您没有通过第一次面试</view>
+			<view class="info">大学路漫漫 此刻才刚刚开始 加油！！！</view>
+		</block>
+		<block wx:if="{{status == 32}}">
+			<view class="info">恭喜您 通过了第一次面试</view>
+			<view class="info">请移步至「首页-加入青媒」选择第二次面试时间</view>
+		</block>
+		<block wx:if="{{status == 33}}">
+			<view class="info">恭喜您 通过了第一次面试</view>
+			<view class="info">请耐心等待第二次面试</view>
+		</block>
+		<block wx:if="{{status == 41}}">
+			<view class="info">很遗憾 您没有通过第二次面试</view>
+			<view class="info">大学路漫漫 此刻才刚刚开始 加油！！！</view>
+		</block>
+		<block wx:if="{{status == 42}}">
+			<view class="info">恭喜您 通过了所有的面试</view>
+			<view class="info">请移步至「首页-加入青媒」与我们取得联系</view>
+		</block>
+		<block wx:if="{{status == 0}}">
+			<view class="info">出现了一些小问题</view>
+			<view class="info">请回到首页下拉刷新后再返回本页</view>
+		</block>
+	</view>
+</view>
+
+<view class="details {{showDetails?'on':'off'}}">
+	<block wx:if="{{status == 11}}">
+		<view class="info">您还没有进行信息填写</view>
+		<view class="info">请移步至「首页-加入青媒」进行信息填写</view>
+	</block>
+	<block wx:else>
+		<view>
+			{{userDetails.birth}}
+			<text class="sep">/</text>
+			{{userDetails.region[0]}} {{userDetails.region[1]}}
+		</view>
+		<view>
+			<text>{{academyArray[userDetails.academy]}}</text>
+			<text class="sep">/</text>
+			<text>{{userDetails.subject}}</text>
+			<text class="sep">/</text>
+			<text>{{userDetails.dorm}}</text>
+		</view>
+		<view>
+			<text class="notice">Phone: </text>
+			<text >{{userDetails.phone}}</text>
+			<text class="sep">/</text>
+			<text class="notice">QQ: </text>
+			<text>{{userDetails.sns}}</text>
+		</view>
+		<view class="break">
+			<text class="notice">申请理由:</text>
+			{{userDetails.introduce}}
+		</view>
+		<view class="break">
+			<text class="notice">兴趣爱好:</text>
+			{{userDetails.hobby}}
+		</view>
+		<view style="margin-top: 30rpx">
+			{{depArray1[userDetails.dep1]}}
+			<text class="sep">/</text>
+			{{depArray2[userDetails.dep2]}}
+			<text class="sep">/</text>
+			{{switchArray[userStatus.switchTo]}}
+		</view>
+		<view>
+			<text class="notice">一面时间:</text>
+			{{timeArray1[userStatus.firstInterviewTime]}}
+			<text class="sep">/</text>
+			<text class="notice">二面时间:</text>
+			{{timeArray2[userStatus.secondInterviewTime]}}
+		</view>
+	</block>
+</view>
+
+<view class="button flex">
+	<view class="contact" bindtap="switch2Contact">联系管理员</view>
+	<text>|</text>
+	<view class="develop" bindtap="switch2Develop">关于小程序</view>
+</view>
+
+<l-toast show="{{showToast}}" duration="2500" offsetY="300" title="轻按头像可切换至个人信息~" />
+
+<l-mask show="{{showMask}}" opacity="0.6" center="{{true}}">
+	<l-loading show="{{showLoading}}" size="large" color="#fee183" full-screen="{{true}}" bg-color="transparent"></l-loading>
+	<canvas style="width: {{canvasWidth}}px; height: {{canvasHeight}}px; position: fixed; left: 100%;" canvas-id="shareCanvas"></canvas>
+	<canvas style="width: {{qrcodeWidth}}px; height: {{qrcodeWidth}}px; position: fixed; left: 100%;" canvas-id="qrCanvas"></canvas>
+	<image class="shareImg" src="{{shareImg}}" mode="widthFix" style="width: {{canvasWidth*0.6}};" wx:if="{{showImg}}"></image>
+	<view class="saveImg" wx:if="{{showImg}}" bindtap="saveShareImg">保存二维码至本地</view>
+	<view class="closeImg" wx:if="{{showImg}}" bindtap="closeShareImg">×</view>
+	<l-dialog show="{{saveSuccess}}" type="alert" title="成功保存" content="请移步至手机相册查看" l-class="dialog" l-title-class="dialog-title" l-content-class="dialog-content" l-confirm-class="dialog-confirm" bind:linconfirm="closeMask" />
+	<l-dialog show="{{saveFailed}}" type="alert" title="问题出现" content="未成功保存，请重试" l-class="dialog" l-title-class="dialog-title" l-content-class="dialog-content" l-confirm-class="dialog-confirm" bind:linconfirm="closeMask" />
+	<l-dialog show="{{authorizeFailed}}" type="alert" title="问题出现" content="需要获取相册访问权限，请到轻按确定进行授权" l-class="dialog" l-title-class="dialog-title" l-content-class="dialog-content" l-confirm-class="dialog-confirm" bind:linconfirm="authorize" />
+</l-mask>

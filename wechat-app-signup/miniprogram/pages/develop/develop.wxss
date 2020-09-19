@@ -1,0 +1,31 @@
+Page {
+  font-weight: 900;
+}
+
+text {
+  color: #ffb400;
+}
+
+.box {
+  margin: 30rpx auto;
+  padding: 35rpx;
+  width: 600rpx;
+  border: 8rpx solid black;
+  border-radius: 35rpx;
+  background-color: white;
+  font-size: 28rpx;
+}
+
+.dot {
+  background-color: #fee183 !important;
+}
+
+.container {
+  padding: 25rpx;
+  width: 540rpx;
+  border: 8rpx solid black;
+  border-radius: 35rpx;
+  background-color: white;
+  color: black;
+  font-size: 28rpx;
+}

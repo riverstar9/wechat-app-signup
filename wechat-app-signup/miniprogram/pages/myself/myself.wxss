@@ -1,0 +1,190 @@
+Page {
+  background-color: white;
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header {
+  position: relative;
+  height: 82vh;
+  background-color: #fee183;
+}
+
+.header .qrcode {
+  height: 70vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .qrcode canvas,.header .qrcode .adminButton {
+  background-color: white;
+  border: 30rpx solid white;
+  border-radius: 50rpx;
+  box-shadow: 0 15rpx #ffb400;
+}
+
+.header .qrcode .adminButton {
+  height: 300rpx;
+  width: 300rpx;
+  background-size: cover;
+	background-position: center;
+}
+
+.header .qrcode view {
+  font-size: 20rpx;
+  line-height: 1rem;
+}
+
+.header .qrcode view:first-of-type {
+  margin-bottom: 30rpx;
+}
+
+.header .avatar {
+  position: absolute;
+  right: 25rpx;
+  bottom: -30rpx;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: white;
+  border-radius: 50%;
+  background-size: cover;
+	background-position: center;
+}
+
+.header .userName {
+  position: absolute;
+  right: 210rpx;
+  bottom: 0rpx;
+}
+
+.header .status {
+  position: absolute;
+  right: 210rpx;
+  bottom: -86rpx;
+  font-size: 24rpx;
+  line-height: 1.2rem;
+  text-align: right;
+}
+
+.button {
+  position: absolute;
+  bottom: 3vh;
+  width: 100%;
+  font-size: 26rpx;
+  color: #ffb400;
+}
+
+.button text {
+  margin: 0 20rpx;
+  color: lightgray;
+}
+
+.on {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.off {
+  opacity: 0;
+  height: 0;
+  transform: scaleY(0.8);
+  transition: all 0.5s;
+}
+
+.tall {
+  height: 82vh;
+  transition: all 0.8s;
+}
+
+.short {
+  height: 62vh;
+  transition: all 0.8s;
+}
+
+.details {
+  margin: 20rpx 50rpx;
+  font-size: 24rpx;
+  line-height: 1.2rem;
+}
+
+.notice {
+  color: #ffb400;
+}
+
+.sep {
+  margin: 10rpx;
+  color: #ffb400;
+}
+
+.break {
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.shareImg {
+  border: 10rpx solid black;
+  border-radius: 50rpx;
+}
+
+.saveImg {
+  margin: 60rpx auto;
+  height: 110rpx;
+  width: 500rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  /* border-bottom: 15rpx solid black; */
+  border-radius: 35rpx;
+  box-shadow: 0 15rpx #ffb400;
+  font-size: 54rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 110rpx;
+  letter-spacing: 2rpx;
+}
+
+.closeImg {
+  position: absolute;
+  top: 156rpx;
+  right: 16rpx;
+  height: 80rpx;
+  width: 80rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  border-radius: 50%;
+  color: #ffb400;
+  font-size: 70rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 72rpx;
+}
+
+.dialog {
+  align-items: flex-end !important;
+  border: 12rpx solid black;
+  border-radius: 0rpx !important;
+  font-weight: 900 !important;
+}
+
+.dialog-title {
+  margin: 10rpx 0 0 5rpx;
+  font-size: 48rpx !important;
+  color: black !important;
+}
+
+.dialog-content {
+  margin-left: 5rpx;
+  font-size: 36rpx !important;
+  color: black !important;
+}
+
+.dialog-confirm {
+  font-size: 36rpx !important;
+  color: black !important ;
+  background-color: #fee183;
+}

@@ -1,0 +1,131 @@
+Page {
+  background-color: white;
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  height: 200rpx;
+  background-color: #fee183;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  font-size: 65rpx;
+  color: transparent;
+  -webkit-text-stroke: 3rpx black;
+}
+
+.title>text {
+  transform: skew(-10deg);
+}
+
+.mainBody0 {
+  height: 800rpx;
+  width: 100%;
+}
+
+.mainBody1 {
+  height: 200rpx;
+  width: 100%;
+}
+
+.detail {
+  font-size: 30rpx;
+  line-height: 1.5rem;
+}
+
+.image {
+  margin: 25rpx;
+  height: 400rpx;
+}
+
+.row{
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+}
+
+.row text {
+  margin-left: 35rpx;
+  font-size: 26rpx;
+}
+
+picker {
+  position: relative;
+  margin: 10rpx 0;
+  padding-left: 25rpx;
+  height: 75rpx;
+  width: 610rpx;
+  border: 9rpx solid black;
+  border-radius: 40rpx;
+  font-size: 40rpx;
+  line-height: 75rpx;
+}
+
+picker:after {
+  content: "▼";
+  position: absolute;
+  top: 2rpx;
+  right: 15rpx;
+  font-size: 24rpx;
+}
+
+.button {
+  margin: 65rpx 0;
+  width: 500rpx;
+  border: 10rpx solid black;
+  border-radius: 35rpx;
+  box-shadow: 0 15rpx #ffb400;
+  font-size: 52rpx;
+  text-align: center;
+  line-height: 110rpx;
+  letter-spacing: 2rpx;
+}
+
+.button>button {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: 0;
+  height: 100rpx;
+  width: 490rpx;
+  font-size: 52rpx;
+  letter-spacing: 2rpx;
+  vertical-align: baseline;
+  background-color: transparent;
+  line-height: 100rpx;
+}
+
+.button>button::after {
+  border: none;
+}
+
+.dialog {
+  align-items: flex-end !important;
+  border: 12rpx solid black;
+  border-radius: 0 !important;
+  font-weight: 900 !important;
+}
+
+.dialog-title {
+  margin-right: 5rpx;
+  font-size: 48rpx !important;
+  color: black !important;
+}
+
+.dialog-content {
+  margin-right: 5rpx;
+  font-size: 36rpx !important;
+  color: black !important;
+}
+
+.dialog-confirm {
+  font-size: 36rpx !important;
+  /* color: #ffc300; */
+  color: black !important ;
+  background-color: #fee183;
+}

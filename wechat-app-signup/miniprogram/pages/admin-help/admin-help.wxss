@@ -1,0 +1,17 @@
+@import "../help/help.wxss";
+
+Page {
+  background-color: #a3daff;
+}
+
+.help text {
+  color: red;
+}
+
+.help .title {
+  color: #0080ff;
+}
+
+.help .title:after {
+  background-color: #0080ff;
+}

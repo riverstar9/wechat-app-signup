@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-mask": "../../dist/mask/index",
+    "l-loading": "../../dist/loading/index",
+    "l-dialog": "../../dist/dialog/index"
+  },
+  "navigationBarTitleText": "报名成功"
+}

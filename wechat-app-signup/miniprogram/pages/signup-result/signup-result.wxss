@@ -1,0 +1,5 @@
+@import "../signup-first/signup-first.wxss";
+
+.mainBody {
+  height: 400rpx;
+}

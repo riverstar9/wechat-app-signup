@@ -1,0 +1,124 @@
+Page {
+  font-weight: 900;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
+}
+
+.qrcode canvas {
+  background-color: white;
+  border: 30rpx solid white;
+  border-radius: 50rpx;
+  box-shadow: 0 15rpx #ffb400;
+}
+
+.title {
+  margin: 40rpx 0;
+  font-size: 60rpx;
+  transform: skew(-10deg);
+  text-align: center;
+  color: transparent;  
+  -webkit-text-stroke: 3rpx #ffb400;  
+}
+
+.text {
+  margin: 10rpx 50rpx;
+  font-size: 24rpx;
+}
+
+.text>text {
+  color: #ffb400;
+}
+
+.modal {
+  position: absolute;
+  top: 10rpx;
+  right: -5rpx;
+  padding: 10rpx;
+  height: 85rpx;
+  width: 280rpx;
+  background-color: white;
+  border: 8rpx solid black;
+  font-size: 20rpx;
+}
+
+.button {
+  margin: 120rpx auto 0 auto;
+  height: 110rpx;
+  width: 500rpx;
+  border: 10rpx solid black;
+  border-radius: 35rpx;
+  box-shadow: 0 15rpx #ffb400;
+  background-color: white;
+  font-size: 52rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 110rpx;
+  letter-spacing: 2rpx;
+}
+
+.shareImg {
+  border: 10rpx solid black;
+  border-radius: 50rpx;
+}
+
+.saveImg {
+  margin: 60rpx auto;
+  height: 110rpx;
+  width: 500rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  /* border-bottom: 15rpx solid black; */
+  border-radius: 35rpx;
+  box-shadow: 0 15rpx #ffb400;
+  font-size: 54rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 110rpx;
+  letter-spacing: 2rpx;
+}
+
+.closeImg {
+  position: absolute;
+  top: 156rpx;
+  right: 16rpx;
+  height: 80rpx;
+  width: 80rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  border-radius: 50%;
+  color: #ffb400;
+  font-size: 70rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 72rpx;
+}
+
+.dialog {
+  align-items: flex-end !important;
+  border: 12rpx solid black;
+  border-radius: 0rpx !important;
+  font-weight: 900 !important;
+}
+
+.dialog-title {
+  margin: 10rpx 0 0 5rpx;
+  font-size: 48rpx !important;
+  color: black !important;
+}
+
+.dialog-content {
+  margin-left: 5rpx;
+  font-size: 36rpx !important;
+  color: black !important;
+}
+
+.dialog-confirm {
+  font-size: 36rpx !important;
+  /* color: #ffc300; */
+  color: black !important ;
+  background-color: #fee183;
+}

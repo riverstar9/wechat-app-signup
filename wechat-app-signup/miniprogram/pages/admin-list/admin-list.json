@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "l-input": "../../dist/input/index",
+    "l-index-list": "../../dist/index-list/index",
+    "l-index-anchor": "/dist/index-anchor/index",
+    "l-segment": "../../dist/segment/index",
+    "l-segment-item": "../../dist/segment-item/index",
+    "l-loading": "../../dist/loading/index",
+    "l-arc-popup": "/dist/arc-popup/index",
+    "l-button": "/dist/button/index"
+  },
+  "navigationBarBackgroundColor": "#a3daff",
+  "navigationBarTitleText": "Admin List"
+}

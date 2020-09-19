@@ -1,0 +1,133 @@
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  animation-name: backgroundView;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.backgroundImage {
+  width: 120vw;
+  animation-name: backgroundImage;
+  animation-duration: 180s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.title {
+  width: 100%;
+  position: absolute;
+  top: 300rpx;
+  padding: 0 100rpx;
+  color: black;
+  font-size: 60rpx;
+  font-weight: 900;
+  letter-spacing: 3rpx;
+}
+
+.loginButton {
+  width: 500rpx;
+  height: 90rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  text-align: center;
+  position: absolute;
+  bottom: 230rpx;
+  left: 125rpx;
+  z-index: 10;
+}
+
+.loginButton>button {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-size: 50rpx;
+  font-weight: 900;
+  letter-spacing: 3rpx;
+  vertical-align: baseline;
+  background: transparent;
+  display: inline;
+  line-height: 90rpx;
+}
+
+.loginButton>button::after {
+  border: none;
+}
+
+.loginButtonBgc {
+  width: 400rpx;
+  height: 400rpx;
+  position: absolute;
+  bottom: 110rpx;
+  right: 10rpx;
+  transform: scale(0.8,0.8);
+}
+
+.copyright {
+  width: 100%;
+  height: 30rpx;
+  position: absolute;
+  bottom: 0rpx;
+  background-color: black;
+  color: #eee;
+  font-size: 16rpx;
+  text-align: center;
+}
+
+.dialog {
+  align-items: flex-end !important;
+  border: 12rpx solid black;
+  border-radius: 0rpx !important;
+  font-weight: 900 !important;
+}
+
+.dialog-title {
+  margin: 10rpx 0 0 5rpx;
+  font-size: 48rpx !important;
+  color: black !important;
+}
+
+.dialog-content {
+  margin-left: 5rpx;
+  font-size: 36rpx !important;
+  color: black !important;
+}
+
+.dialog-confirm {
+  font-size: 36rpx !important;
+  /* color: #ffc300; */
+  color: black !important ;
+  background-color: #fee183;
+}
+
+@keyframes backgroundView {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundImage {
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+  25% {
+    transform: translate(-20vw,-14vh) scale(1.05);
+  }
+  50% {
+    transform: translate(-20vw,0rpx) scale(1);
+  }
+  75% {
+    transform: translate(0rpx,-14vh) scale(1.05);
+  }
+}

@@ -1,0 +1,16 @@
+<view class="title flex">
+  <text>出现了一些小问题</text>
+</view>
+
+<view class="pic flex">
+  <image src="../../images/error.svg"></image>
+</view>
+
+<view class="detail">
+  <view>目前正处于 {{'<'}}{{statusArray[status]}}{{'>'}} 阶段</view>
+  <view>本页面对应的流程未到时间或已过期</view>
+  <view wx:if="{{status == 1}}">亦或是您的编辑次数已达上限</view>
+  <view wx:else>亦或是您没有在报名时间进行报名</view>
+</view>
+
+<view class="button" bindtap="switchBack">返回上一级</view>

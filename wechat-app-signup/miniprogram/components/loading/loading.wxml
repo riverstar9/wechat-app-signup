@@ -1,0 +1,6 @@
+<view class="loadModal">
+  <view class="pointBorder">
+    <view class="point"></view>
+    <view class="loading">Loading...</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-steps": "../../dist/steps/index",
+    "l-step": "../../dist/step/index"
+  },
+  "navigationBarTitleText": "关于小程序"
+}

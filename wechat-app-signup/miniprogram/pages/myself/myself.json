@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-mask": "../../dist/mask/index",
+    "l-loading": "../../dist/loading/index",
+    "l-dialog": "../../dist/dialog/index",
+    "l-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText": "个人信息"
+}

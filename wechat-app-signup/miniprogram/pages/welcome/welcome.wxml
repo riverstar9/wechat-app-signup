@@ -1,0 +1,37 @@
+<view class="background">
+  <image class="backgroundImage" src="../../images/welcome.png" mode="widthFix"></image>
+</view>
+
+<l-transition show="{{true}}" name="fade-left" duration="1800">
+  <view class="title">
+    <view>{{titleArray[title][0]}}</view>
+    <view>{{titleArray[title][1]}}</view>
+    <view>{{titleArray[title][2]}}</view>
+    <view>{{titleArray[title][3]}}</view>
+  </view>
+</l-transition>
+
+<l-transition show="{{true}}" name="fade" duration="500" l-class="aniDelay">
+  <view class="loginButton">
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">轻按进入南工青媒</button>
+    <loading wx:if="{{loadModal}}" />
+  </view>
+  <image class="loginButtonBgc" src="../../images/loginButton.png" mode="widFix"></image>
+</l-transition>
+
+<view class="copyright">© Riverstar Team</view>
+
+<l-dialog
+  show="{{showDialog}}"
+  type="alert"     
+  title="问题出现"
+  content="请重新完成微信授权"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm" />
+
+<!-- <l-toast
+  show="{{showToast}}"
+  duration="6500"
+  title="iOS设备可能会在使用中遇到一些问题，我们对此深感抱歉" /> -->

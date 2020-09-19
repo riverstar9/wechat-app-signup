@@ -1,0 +1,46 @@
+Page {
+  background-color: #a3daff;
+  font-weight: 900;
+}
+
+swiper {
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 100rpx;
+  color: transparent;
+  -webkit-text-stroke: 3rpx #0080ff;
+}
+
+.upload {
+  left: 40rpx;
+  align-items: flex-start;
+}
+
+.button {
+  position: absolute;
+  bottom: 120rpx;
+  right: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.button>view {
+  margin-top: 50rpx;
+  height: 90rpx;
+  width: 330rpx;
+  border: 8rpx solid #0080ff;
+  border-radius: 35rpx;
+  color: #0080ff;
+  font-size: 40rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 90rpx;
+}

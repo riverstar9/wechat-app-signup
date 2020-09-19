@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-tabs": "../../dist/tabs/index",
+    "l-tabpanel": "../../dist/tabpanel/index"
+  },
+  "navigationBarTitleText": "报名帮助"
+}

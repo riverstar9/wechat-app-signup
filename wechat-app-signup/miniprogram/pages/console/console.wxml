@@ -1,0 +1,3 @@
+<button bindtap="subscribeSend2">审核信息结果</button>
+<button bindtap="subscribeSend3">一面结果</button>
+<button bindtap="subscribeSend4">二面结果</button>

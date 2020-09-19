@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "l-message": "../../dist/message/index"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,6 @@
+<view class="out">
+  <view class="help button" bindtap="switch2Help">Help</view>
+  <view class="excel button" bindtap="switch2Excel">Excel</view>
+  <view class="list button" bindtap="switch2List">List</view>
+  <view class="scan button" bindtap="switch2Scan">Scan QR</view>
+</view>

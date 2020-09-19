@@ -1,0 +1,7 @@
+<view class="scanButton" bindlongtap="scanQRcode">
+  <view class="scanText">
+    <view>Long</view>
+    <view>Press</view>
+    <view>To Scan</view>
+  </view>
+</view>

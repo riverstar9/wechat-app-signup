@@ -1,0 +1,132 @@
+Page {
+  background-color: #a3daff;
+}
+
+.search, .header {
+  background-color: white;
+}
+
+l-index-list {
+  transition: 0.3s;
+}
+
+.l-anchor-class {
+  height: 60rpx;
+}
+
+.l-selected-class {
+  background-color: #a3daff  !important;
+}
+
+.l-tip-text-class {
+  color: #fff !important;
+  font-size: 48rpx !important;
+}
+
+.l-tip-class {
+  background-color: #a3daff !important;
+}
+
+.person-item {
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+  background-color: #fff;
+  height: 110rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+}
+
+.person-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 10rpx;
+}
+
+.person-details {
+  font-size: 24rpx;
+  color: #0080ff;
+}
+
+#star {
+  color: #ff8000;
+}
+
+.sidebar-class {
+  right: 0 !important;
+  padding-left: 10rpx !important;
+  padding-right: 20rpx !important;
+}
+
+.top-container {
+  position: fixed;
+  right: 40rpx;
+  bottom: 60rpx;
+  z-index: 2;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  box-shadow:0px 3px 8px 0px rgba(155,193,185,0.5);
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+}
+
+.top-img {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.popup-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+}
+
+.popup-title {
+  margin-top: 30rpx;
+  color: #0080ff;
+}
+
+.popup-title:first-of-type {
+  margin-top: 0rpx;
+}
+
+.popup-title>text {
+  margin-left: 20rpx;
+  color: grey;
+  font-size: 22rpx;
+}
+
+radio {
+  margin-top: 10rpx;
+  margin-left: 25rpx;
+}
+
+radio text {
+  margin-left: 5rpx;
+  font-size: 26rpx !important;
+}
+
+#submit{
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: 0 !important;
+  width: 60rpx !important;
+  height: 30rpx !important;
+  font-size: 26rpx;
+  font-weight: 900;
+  display: block;
+  background: transparent;
+  color: #0080ff !important;
+}
+
+.submit::after {
+  border: none !important;
+}

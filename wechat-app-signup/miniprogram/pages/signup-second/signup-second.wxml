@@ -1,0 +1,81 @@
+<view class="title flex">
+  <text wx:if="{{secondInterview == 0}}">您没有通过第一次面试</text>
+  <text wx:if="{{secondInterview == 1 || secondInterview == 2}}">您通过了第一次面试</text>
+</view>
+
+<view class="mainBody0 flex" wx:if="{{secondInterview == 0}}">
+  <view class="detail">非常感谢你选择了青年传媒中心</view>
+  <view class="detail">但是很遗憾，你没能通过我们的面试</view>
+  <view class="detail" style="height: 35rpx"></view>
+  <view class="detail">每年我们都不得不在众多优秀的面试者中</view>
+  <view class="detail">做出艰难的取舍</view>
+  <view class="detail">我们真心地希望你能够充实愉快地度过大学生活</view>
+  <view class="detail">大学路漫漫，此刻才刚刚开始</view>
+  <view class="detail">希望你保持乐观的心态</view>
+  <view class="detail">积极地参加各种活动来锻炼自己</view>
+  <view class="detail" style="height: 35rpx"></view>
+  <view class="detail" style="color: #ffb400">加油！！！</view>
+</view>
+
+<block wx:if="{{secondInterview == 1 || secondInterview == 2}}">
+  <view class="image flex">
+    <image src="../../images/forward.svg" mode="heightFix" />
+  </view>
+
+  <view class="mainBody1 flex">
+    <view class="detail">恭喜你通过了第一次面试</view>
+    <view class="detail" wx:if="{{switchTo != -1}}">并被调剂至{{depArray[switchTo]}}</view>
+    <view class="detail">第二次面试将于不久后开始</view>
+    <view class="detail" wx:if="{{secondInterview == 1}}">请在下方选择参加二面的时间和地点</view>
+    <view class="detail" style="color: #ffb400">我们期待着你萌的到来( • ̀ω ⁃᷄)✧</view>
+  </view>
+</block>
+
+<form bindsubmit="getInfo" wx:if="{{secondInterview == 1}}">
+  <view class="row">
+    <view class="time">
+      <text>预约第二次面试时间</text>
+      <picker name="secondInterviewTime" mode="selector" bindchange="bindTimeChange" value="{{time}}" range="{{timeArray}}">
+        {{timeArray[time]}}
+      </picker>
+    </view>
+  </view>
+
+  <view class="flex">
+    <view class="button"><button form-type="submit">确认提交</button></view>
+  </view>
+</form>
+
+<view class="flex">
+  <view class="button" bindtap="switchBack" wx:if="{{secondInterview == 0 || secondInterview == 2}}">返回上一级</view>
+</view>
+
+<l-dialog
+  show="{{showDialog}}"
+  type="alert"     
+  title="提交成功"
+  content="轻按确认返回主页"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="requestSubscribe" />
+
+<l-dialog
+  show="{{subscribeFailed}}"
+  type="alert"
+  title="问题出现"
+  content="请允许消息订阅以获得审核结果通知"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="requestSubscribe" />
+
+  <l-loading
+  show="{{showLoading}}"
+  color="#ffc300"
+  size="large"
+  bg-color="rgb(0,0,0)"
+  opacity="0.4"
+  full-screen="{{true}}" />

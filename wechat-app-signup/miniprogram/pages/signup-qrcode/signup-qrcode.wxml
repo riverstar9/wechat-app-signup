@@ -1,0 +1,62 @@
+<view class="qrcode" style="height: {{myQRcodeHeight*1.2}}px;" bindlongpress="getShareImg">
+  <canvas style="width: {{myQRcodeWidth}}px; height: {{myQRcodeWidth}}px; {{showMyQRcode}}" canvas-id="myQRcode"></canvas>
+</view>
+
+<view class="title">感谢您的报名!</view>
+<view class="text"><text>▲</text> 信息审核结果将于不久后通过<text>微信服务通知</text>发送给您，请允许小程序进行消息订阅</view>
+<view class="text"><text>▲</text> 届时您也可以直接打开小程序进行<text>结果查询和预约面试时间</text></view>
+<view class="text"><text>●</text> 上方的二维码用于在面试时核对身份，<text>请在面试时出示</text>，自行扫描会出现乱码</view>
+<view class="text"><text>●</text> 二维码推荐<text>长按保存</text>，您也可以<text>在首页轻按头像</text>重新获取</view>
+<view class="text"><text>●</text> 二维码中含有隐私信息，<text>请不要分享给他人</text></view>
+
+<view class="button" bindtap="requestSubscribe">回到首页</view>
+
+<l-dialog
+  show="{{subscribeFailed}}"
+  type="alert"
+  title="问题出现"
+  content="请允许消息订阅以获得审核结果通知"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="requestSubscribe" />
+
+<l-mask show="{{showMask}}" opacity="0.6" center="{{true}}">
+  <l-loading show="{{showLoading}}" size="large" color="#fee183" full-screen="{{true}}" bg-color="transparent"></l-loading>
+  <canvas style="width: {{canvasWidth}}px; height: {{canvasHeight}}px; position: fixed; left: 100%;" canvas-id="shareCanvas"></canvas>
+  <canvas style="width: {{qrcodeWidth}}px; height: {{qrcodeWidth}}px; position: fixed; left: 100%;" canvas-id="qrCanvas"></canvas>
+  <image class="shareImg" src="{{shareImg}}" mode="widthFix" style="width: {{canvasWidth*0.6}};" wx:if="{{showImg}}"></image>
+  <view class="saveImg" wx:if="{{showImg}}" bindtap="saveShareImg">保存二维码至本地</view>
+  <view class="closeImg" wx:if="{{showImg}}" bindtap="closeShareImg">×</view>
+  <l-dialog
+    show="{{saveSuccess}}"
+    type="alert"
+    title="成功保存"
+    content="请移步至手机相册查看"
+    l-class="dialog"
+    l-title-class="dialog-title"
+    l-content-class="dialog-content"
+    l-confirm-class="dialog-confirm"
+    bind:linconfirm="closeMask" />
+  <l-dialog
+    show="{{saveFailed}}"
+    type="alert"
+    title="问题出现"
+    content="未成功保存，请重新操作"
+    l-class="dialog"
+    l-title-class="dialog-title"
+    l-content-class="dialog-content"
+    l-confirm-class="dialog-confirm"
+    bind:linconfirm="closeMask" />
+    <l-dialog
+      show="{{authorizeFailed}}"
+      type="alert"
+      title="问题出现"
+      content="需要获取相册访问权限，请到轻按确定进行授权"
+      l-class="dialog"
+      l-title-class="dialog-title"
+      l-content-class="dialog-content"
+      l-confirm-class="dialog-confirm"
+      bind:linconfirm="authorize" />
+</l-mask>

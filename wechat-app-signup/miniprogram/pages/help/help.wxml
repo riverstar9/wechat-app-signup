@@ -1,0 +1,76 @@
+<l-tabs animated-for-line active-color="#ffb400" l-active-class="l-active-class" l-inactive-class="l-inactive-class" l-header-line-class="l-header-line-class">
+	<l-tabpanel class="help" tab="报名帮助" key="one" slot="one">
+		<view class="out">
+			<view>下面的使用帮助，介绍了小程序的大部分界面和使用中可能发生的情况，若遇到下面没有提到的问题，欢迎通过个人信息页中的「联系管理员」页或右侧的「匿名提问箱」和我们取得联系</view>
+			<view>您可以通过标题快速找到自己遇到的问题</view>
+			<view><text>首页可以跳转到四个页面：「个人信息页」「加入青媒页」「报名帮助页」「关于青媒页」</text></view>
+			<view><text>您可以在首页可进行下拉刷新，防止数据出现滞后</text></view>
+			<view><text>请不要通过收藏小程序的方法进入小程序，可能会出现无法获取数据的问题</text></view>
+
+			<view class="title">个人信息页</view>
+			<view><text>● </text>轻按<text>「首页右上角的头像」</text>即可进入<text>「个人信息页」</text></view>
+			<view><text>● </text>轻按<text>「个人信息页的头像」</text>即可在<text>「状态提示信息」</text>和<text>「个人资料」</text>间切换</view>
+			<view><text>● </text>填写好报名信息后，可查看<text>「面试二维码」</text>，长按二维码可保存到本地，保存时请给予小程序相册访问权限</view>
+
+			<view class="title">联系管理员页</view>
+			<view><text>● </text>轻按<text>「个人信息页」</text>下方的<text>「联系管理员」</text>按钮即可进入</view>
+			<view><text>● </text>轻按按钮可以复制管理员的联系方式，请在添加好友时备注<text>「来自招新小程序」</text>，便于快速处理</view>
+
+			<view class="title">加入青媒页</view>
+			<view><text>● </text>包含了全部的<text>报名流程</text>，可通过左右滑动页面查看完整流程及相关指引</view>
+			<view><text>● </text>报名流程中的每个阶段都只能在对应时间进入</view>
+
+			<view class="title">信息填写</view>
+			<view><text>● </text>请如实准确地填写个人信息，填写完毕后<text>只有一次修改的机会</text>，若还需修改请联系管理员</view>
+			<view><text>● </text>错误的信息，<text>尤其是错误的联系方式</text>，会严重影响您的招新进程</view>
+			<view><text>● </text>只能填写<text>中文姓名</text>，请不要填写数字或字母</view>
+			<view><text>● </text>可以选择两个志愿部门，您<text>有可能会被调剂至第二志愿部门</text>，若第二志愿部门选择<text>不服从调剂</text>或与第一志愿部门相同，则不会被调剂</view>
+			<view><text>● </text>自我介绍和申请理由为必填项目，<text>最多输入300字</text>，若字数过多，推荐在其他编辑器中写好再粘贴过来</view>
+			<view><text>● </text>兴趣爱好为选填项目，<text>最多输入200字</text></view>
+			<view><text>● </text>提交时请<text>授予小程序消息订阅权限</text>，以推送信息审核结果</view>
+
+			<view class="title">面试二维码</view>
+			<view><text>● </text>提交报名信息后会生成你的<text>面试二维码</text>，用于面试时快速确认身份，<text>请在面试时出示</text></view>
+			<view><text>● </text>面试二维码<text>推荐长按保存</text>，其中含有隐私信息，请不要分享给他人</view>
+			<view><text>● </text>面试二维码也会在<text>个人信息页中</text>展示</view>
+
+			<view class="title">结果查询</view>
+			<view><text>● </text>结果查询包括<text>「信息审核结果查询」「第一次面试结果查询」「第二次面试结果查询」</text>，分别对应报名流程2-4</view>
+			<view><text>● </text>若信息审核结果为通过，则需要在查询界面预约<text>第一次面试时间</text>，提交时请<text>授予小程序消息订阅权限</text>，以推送第一次面试结果</view>
+			<view><text>● </text>若第一次面试结果为通过，则需要在查询界面预约<text>第二次面试时间</text>，提交时请<text>授予小程序消息订阅权限</text>，以推送第二次面试结果</view>
+			<view><text>● </text>面试时间为弹性时间，推荐<text>按照自己选择的时间</text>进行面试，若时间选择错误无需修改，直接在其他时间段前往面试即可</view>
+
+			<view class="title">报名帮助页</view>
+			<view><text>● </text>左边的<text>「报名帮助」</text>选项卡，可以查看小程序的帮助手册</view>
+			<view><text>● </text>右边的<text>「匿名提问箱」</text>选项卡，可以提交匿名问题、查看匿名问题的回答，提问需要遵守相关规则</view>
+			<view><text>● </text><text>较为紧急/个人问题/需要管理员帮助</text>的事项，请移步<text>「个人信息页」</text>联系管理员</view>
+
+			<view class="title">关于青媒页</view>
+			<view><text>● </text>包含青年传媒中心的相关介绍，可以跳转到<text>青年传媒中心的相关公众号</text></view>
+		</view>
+	</l-tabpanel>
+	<l-tabpanel class="peing" tab="匿名提问箱" key="two" slot="two">
+		<view class="box">
+			<view>以下是对匿名提问箱中问题的回答</view>
+			<view>轻按右下角的加号可以向提问箱投递新问题</view>
+			<view style="color: #ffb400;">较为紧急/个人问题/需要管理员帮助的事项</view>
+			<view style="color: #ffb400;">请移步{{"<"}}个人信息{{">"}}页联系管理员</view>
+		</view>
+		<view class="peingDetails">
+			<view class="box peingBox" wx:for="{{peingDetails}}" wx:key="index">
+				<view class="row">
+					<view class="ch">Q</view>
+					<view class="text q">{{item.question}}</view>
+				</view>
+				<view class="row right">
+					<view class="text a">{{item.answer}}</view>
+					<view class="ch">A</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="peing-container" bindtap="peing">
+			<image src='../../images/peing.svg' class='peing-img'></image>
+		</view>
+	</l-tabpanel>
+</l-tabs>

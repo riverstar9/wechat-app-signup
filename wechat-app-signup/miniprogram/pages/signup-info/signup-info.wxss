@@ -1,0 +1,121 @@
+Page {
+  font-weight: 900;
+}
+
+text {
+  margin-left: 35rpx;
+}
+
+.tips {
+  display: inline-block;
+  margin-left: 20rpx;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 26rpx;
+  transform: skew(-10deg);
+}
+
+.overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input, picker, textarea{
+  margin: 10rpx 0;
+  padding-left: 25rpx;
+  height: 75rpx;
+  width: 610rpx;
+  border: 10rpx solid black;
+  border-radius: 40rpx;
+  font-size: 40rpx;
+}
+
+picker {
+  position: relative;
+  line-height: 75rpx;
+}
+
+picker:after {
+  content: "▼";
+  position: absolute;
+  top: 2rpx;
+  right: 15rpx;
+  font-size: 24rpx;
+}
+
+.placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+  width: 584rpx;
+  height: 380rpx;
+  padding: 15rpx 25rpx;
+}
+
+.part {
+  margin-left: 62rpx;
+  color: #ffb400;
+  font-size: 56rpx;
+  letter-spacing: 2rpx;
+  transform: skew(-10deg);
+}
+
+.part:after {
+  content: "";
+  display: block;
+  height: 12rpx;
+  width: 650rpx;
+  background-color: #ffb400;
+}
+
+.row{
+  margin: 35rpx 0;
+  margin-left: 50rpx;
+}
+
+.row.line {
+  display: flex;
+}
+
+.name>input{
+  width: 360rpx;
+}
+
+.sex>picker {
+  width: 180rpx;
+}
+
+.sex {
+  margin-left: 30rpx;
+}
+
+.error {
+  border-radius: 0 !important;
+}
+
+.button {
+  margin: 65rpx auto;
+  padding: 0;
+  outline: 0;
+  height: 100rpx;
+  width: 500rpx;
+  background-color: white;
+  border: 10rpx solid black;
+  border-radius: 35rpx;
+  box-shadow: 0 12rpx #ffb400;
+  font-size: 45rpx;
+  font-weight: 900;
+  letter-spacing: 2rpx;
+  line-height: 75rpx;
+}
+
+.button>button::after {
+  border: none;
+}
+
+.loading {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

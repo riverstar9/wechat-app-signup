@@ -1,0 +1,116 @@
+<view class="title">
+  <text class="username" id="{{user.userDetails.username}}" bindlongpress="copy">{{user.userDetails.username}}</text>
+  <text class="sex">{{sexArray[user.userDetails.sex]}}</text>
+</view>
+
+<image class="avatar" src="{{user.userInfo.avatarUrl}}" mode="widthFix" bindtap="star" bindlongpress="cancelStar"></image>
+
+<swiper indicator-dots="true" indicator-color="rgba(0,128,255,0.5)" indicator-active-color="#0080ff">
+  <swiper-item class="details">
+    <view>
+      {{user.userDetails.birth}}
+      <text class="sep">/</text>
+      {{user.userDetails.region[0]}} {{user.userDetails.region[1]}}
+    </view>
+    <view>
+      <text id="{{academyArray[user.userDetails.academy]}}" bindlongpress="copy">{{academyArray[user.userDetails.academy]}}</text>
+      <text class="sep">/</text>
+      <text id="{{user.userDetails.subject}}" bindlongpress="copy">{{user.userDetails.subject}}</text>
+      <text class="sep">/</text>
+      <text id="{{user.userDetails.dorm}}" bindlongpress="copy">{{user.userDetails.dorm}}</text>
+    </view>
+    <view>
+      <text class="notice">Phone: </text>
+      <text id="{{user.userDetails.phone}}" bindtap="call" bindlongpress="copy">{{user.userDetails.phone}}</text>
+      <text class="sep">/</text>
+      <text class="notice">QQ: </text>
+      <text id="{{user.userDetails.sns}}" bindlongpress="copy">{{user.userDetails.sns}}</text>
+    </view>
+    <view style="margin-top: 30rpx">
+      {{depArray1[user.userDetails.dep1]}}
+      <text class="sep">/</text>
+      {{depArray2[user.userDetails.dep2]}}
+      <text class="sep">/</text>
+      {{switchArray[user.userStatus.switchTo]}}
+    </view>
+    <view>
+      <text class="notice">信息填写:</text>
+      {{statusArray2[user.userStatus.editTimes + 1]}}
+      <text class="sep">/</text>
+      <text class="notice">信息审核:</text>
+      {{statusArray1[user.userStatus.firstInterview + 1]}}
+    </view>
+    <view>
+      <text class="notice">一面时间:</text>
+      {{timeArray1[user.userStatus.firstInterviewTime]}}
+      <text class="sep">/</text>
+      <text class="notice">一面结果:</text>
+      {{statusArray1[user.userStatus.secondInterview + 1]}}
+    </view>
+    <view>
+      <text class="notice">二面时间:</text>
+      {{timeArray2[user.userStatus.secondInterviewTime]}}
+      <text class="sep">/</text>
+      <text class="notice">二面结果:</text>
+      {{statusArray1[user.userStatus.result + 1]}}
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="intro" scroll-y="{{true}}">
+      <view>
+        <text class="notice">申请理由:</text>
+        {{user.userDetails.introduce}}
+      </view>
+      <view>
+        <text class="notice">兴趣爱好:</text>
+        {{user.userDetails.hobby}}
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+<view class="tabs">
+  <l-tabs has-line="{{false}}"
+    active-color="#FFF" inactive-color="#000" active-key="2"
+    l-active-class="active-tabs" l-line-class="active-line" l-header-class="tabs-content">
+    <l-tabpanel tab="记录" key="1" slot="1">
+      <view class="box" wx:for="{{user.userEvaluate}}" wx:key="index">
+        <view class="info"><text>评价人：</text>{{item.nickName}}</view>
+        <view class="info"><text>评价时间：</text>{{item.time}}</view>
+        <view class="info">{{item.status}} / {{item.kind}} / {{item.stars}}分 / {{item.evaluate}}</view>
+        <view class="info"><text>快速记录：</text>{{item.notes}}</view>
+        <image src="{{item.avatarUrl}}"></image>
+      </view>
+    </l-tabpanel>
+    <l-tabpanel tab="评价" key="2" slot="2">
+      <block wx:if="{{appStatus != 4}}">
+      <form bindsubmit="updateEvaluate">
+        <view class="littleTitle">※ 您现在评价的是 {{status}} 的结果哦</view>
+        <slider name="stars" min="0" max="10" step="1" show-value="true" activeColor="#0080ff" value="5" />
+        <radio-group name="evaluate" class="radiogroup1">
+          <view><radio value="0" color="#0080ff" />暂定淘汰</view>
+          <view><radio value="1" color="#0080ff" checked="true" />待定</view>
+          <view><radio value="2" color="#0080ff" />暂定通过</view>
+        </radio-group>
+        <textarea name="notes" placeholder="快速记录" placeholder-class="textarea" maxlength="100" cursor-spacing="100" show-confirm-bar="{{false}}"></textarea>
+        <view class="submit"><button form-type="submit">提交</button></view>
+      </form>
+      </block>
+    </l-tabpanel>
+    <l-tabpanel tab="审核" key="3" slot="3">
+      <block wx:if="{{appStatus != 4}}">
+      <form bindsubmit="updateResult">
+        <view class="littleTitle">※ 您现在审核的是 {{status}} 的结果哦</view>
+        <radio-group name="result" class="radiogroup2">
+          <view><radio value="1" color="#0080ff" />通过当前阶段</view>
+          <view><radio value="0" color="#0080ff" />不通过当前阶段</view>
+        </radio-group>
+        <picker name="switch" mode="selector" bindchange="bindChange" value="{{switch}}" range="{{switchArray}}">
+        {{switchArray[switch]}}
+        </picker>
+        <view class="submit"><button form-type="submit">提交</button></view>
+      </form>
+      </block>
+    </l-tabpanel>
+  </l-tabs>
+</view>

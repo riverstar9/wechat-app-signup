@@ -1,0 +1,46 @@
+Page {
+  background-color: white;
+  font-weight: 900;
+}
+
+.flex {
+  display: flex;
+	align-items: center;
+  justify-content: center;
+}
+
+.title {
+  height: 200rpx;
+  background-color: #fee183;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  font-size: 65rpx;
+  color: transparent;
+  -webkit-text-stroke: 3rpx black;
+}
+
+.title>text {
+  transform: skew(-10deg);
+}
+
+.detail {
+  margin: 60rpx 0;
+  color: #ffb400;
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 30rpx;
+}
+
+.button {
+  margin: 120rpx auto 50rpx auto;
+  height: 110rpx;
+  width: 500rpx;
+  border: 10rpx solid black;
+  border-radius: 35rpx;
+  box-shadow: 0 15rpx #ffb400;
+  font-size: 52rpx;
+  font-weight: 900;
+  text-align: center;
+  line-height: 110rpx;
+  letter-spacing: 2rpx;
+}

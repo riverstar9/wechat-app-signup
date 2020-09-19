@@ -1,0 +1,115 @@
+<form bindsubmit="getInfo">
+  <view class="part">Part01</view>
+  <view class="row line">
+    <view class="name">
+      <text>姓名</text>
+      <input name="username" placeholder="请填写姓名" placeholder-class="placeholder" value="{{userDetails.username}}"></input>
+    </view>
+
+    <view class="sex">
+      <text>性别</text>
+      <picker name="sex" mode="selector" bindchange="bindSexChange" value="{{userDetails.sex}}" range="{{sexArray}}">
+        {{sexArray[userDetails.sex]}}
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="birth">
+      <text>生日</text>
+      <picker name="birth" mode="date" bindchange="bindBirthChange" value="{{userDetails.date}}" start="1998-01-01" end="2008-12-31">
+        {{userDetails.dateY}}年{{userDetails.dateM}}月{{userDetails.dateD}}日
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="region">
+      <text>籍贯</text>
+      <picker name="region" mode="region" bindchange="bindRegionChange" value="{{userDetails.region}}" custom-item="{{customItem}}">
+        <view class="overflow">{{userDetails.region[0]}} {{userDetails.region[1]}} {{userDetails.region[2]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="academy">
+      <text>学院</text>
+      <picker name="academy" mode="selector" bindchange="bindAcademyChange" value="{{userDetails.academy}}" range="{{academyArray}}">
+        {{academyArray[userDetails.academy]}}
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="subject">
+      <text>班级</text>
+      <input name="subject" placeholder="请填写班级" placeholder-class="placeholder" value="{{userDetails.subject}}"></input>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="dorm">
+      <text>宿舍区</text>
+      <input name="dorm" placeholder="请填写宿舍区" placeholder-class="placeholder" value="{{userDetails.dorm}}"></input>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="phone">
+      <text>手机</text>
+      <input name="phone" type="number" placeholder="请填写手机号" placeholder-class="placeholder" value="{{userDetails.phone}}"></input>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="sns">
+      <text>QQ</text>
+      <input name="sns" type="number" placeholder="请填写QQ号" placeholder-class="placeholder" value="{{userDetails.sns}}"></input>
+    </view>
+  </view>
+
+  <view class="part">Part02</view>
+  <view class="row">
+    <view class="dep1">
+      <text>第一志愿部门</text>
+      <picker name="dep1" mode="selector" bindchange="bindDep1Change" value="{{userDetails.dep1}}" range="{{depArray1}}">
+        {{depArray1[userDetails.dep1]}}
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="dep2">
+      <text>第二志愿部门</text>
+      <picker name="dep2" mode="selector" bindchange="bindDep2Change" value="{{userDetails.dep2}}" range="{{depArray2}}">
+        {{depArray2[userDetails.dep2]}}
+      </picker>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="introduce">
+      <text>自我介绍与申请理由</text><text class="tips">最多输入300字</text>
+      <textarea name="introduce" placeholder="简洁明了地介绍一下自己吧" placeholder-class="placeholder" value="{{userDetails.introduce}}" maxlength="300"></textarea>
+    </view>
+  </view>
+
+  <view class="row">
+    <view class="hobby">
+      <text>兴趣爱好</text><text class="tips">选填 最多输入200字</text>
+      <textarea name="hobby" placeholder="选填内容 让我们更多地了解你" placeholder-class="placeholder" value="{{userDetails.hobby}}" maxlength="200"></textarea>
+    </view>
+  </view>
+
+  <l-message show="{{errorInfo}}" content="{{errorContent}}" type="error" duration="4500" l-class="error" />
+  <button class="button" form-type="submit">立即提交</button>
+</form>
+
+<l-loading
+  show="{{showLoading}}"
+  color="#ffc300"
+  size="large"
+  bg-color="rgb(0,0,0)"
+  opacity="0.4"
+  full-screen="{{true}}" />

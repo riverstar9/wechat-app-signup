@@ -1,0 +1,71 @@
+.loadModal {
+  position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 140rpx;
+	left: 0;
+	margin: auto;
+	width: 600rpx;
+	height: 150rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	/* flex-direction: column; */
+  /* justify-content: center; */
+  z-index: 999;
+}
+
+.loadModal .pointBorder{
+  margin: 0 auto;
+  width: 450rpx;
+  height: 50rpx;
+  border: 8rpx solid white;
+  border-radius: 50rpx;
+}
+
+.loadModal .pointBorder .loading {
+  margin-top: 30rpx;
+  color: white;
+}
+
+.loadModal .point {
+  /* margin-left: 37.5rpx; */
+  width: 50rpx;
+  height: 50rpx;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: loadPoint;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loadPoint {
+  0% {
+    transform: scale(0);
+  }
+
+  22.5% {
+    transform: scale(1);
+    border-radius: 50%;
+  }
+
+  48% {
+    transform: translateX(200rpx);
+    border-radius: 0;
+  }
+
+  52% {
+    transform: translateX(200rpx);
+    border-radius: 0;
+  }
+
+  77.5% {
+    transform: translateX(400rpx);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: translateX(400rpx) scale(0);
+  }
+}
