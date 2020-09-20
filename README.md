@@ -22,6 +22,12 @@
 
 ### 结构图
 
+<img src="design/stu3.jpg/" alt="结构图1" style="zoom: 33%;" />
+
+<img src="design/stu2.jpg/" alt="结构图2" style="zoom:33%;" />
+
+<img src="design/stu1.jpg/" alt="结构图3" style="zoom:33%;" />
+
 ## Usage
 
 ### 数据库
@@ -63,13 +69,13 @@
 * **userInfo**：通过wx.getUserInfo获得的用户信息，包括微信昵称、微信头像等
 * **userDetails**：用户通过填写报名信息上传的数据，详见signup-info页；其中subject指专业和班级
 * **userStatus**：用于判断用户状态
-    * *isAdmin*：默认为-1，只有值为1可开启管理员权限
-    * *editTimes*：默认为-1，已填写报名信息为0，修改一次信息后为1
-    * *firstInterview/secondInterview*：信息审核结果/第一次面试结果，默认为-1，未通过该阶段为0，通过该阶段为1，已预约面试时间为2
-    * *result*：第二次面试结果，默认为-1，未通过该阶段为0，通过该阶段为1
-    * *firstInterviewTime/secondInterviewTime*：第一次/第二次面试时间，默认为99，对应cloudStatus中的timeArray
-    * *switchTo*：调剂信息，默认为-1，对应部门数组
-    * *evaluate*：记录所有评价人员的微信昵称
+    * ***isAdmin***：默认为-1，只有值为1可开启管理员权限
+    * ***editTimes***：默认为-1，已填写报名信息为0，修改一次信息后为1
+    * ***firstInterview/secondInterview***：信息审核结果/第一次面试结果，默认为-1，未通过该阶段为0，通过该阶段为1，已预约面试时间为2
+    * ***result***：第二次面试结果，默认为-1，未通过该阶段为0，通过该阶段为1
+    * ***firstInterviewTime/secondInterviewTime***：第一次/第二次面试时间，默认为99，对应cloudStatus中的timeArray
+    * ***switchTo***：调剂信息，默认为-1，对应部门数组
+    * ***evaluate***：记录所有评价人员的微信昵称
 
 #### cloudStatus
 
@@ -128,17 +134,35 @@
 
 ## Preview
 
+*部分细节可能与最新版本不同*
+
 #### 欢迎页与主页
+
+<img src="design/preview1.png/" alt="预览图-欢迎页与主页" style="zoom:33%;" />
 
 #### 报名流程
 
+<img src="design/preview2.png/" alt="预览图-报名流程" style="zoom:33%;" />
+
 #### 报名信息填写
+
+<img src="design/preview3.png/" alt="预览图-报名信息填写" style="zoom:33%;" />
 
 #### 审核结果
 
-#### 报名帮助
+![预览图-审核结果](design/preview4.png/)
 
 #### 个人信息
+
+![预览图-个人信息](design/preview5.png/)
+
+#### 管理员页
+
+![预览图-管理员页](design/preview6.png/)
+
+#### 管理员列表
+
+<img src="design/preview7.png/" alt="预览图-管理员列表" style="zoom:33%;" />
 
 ## Todo
 
