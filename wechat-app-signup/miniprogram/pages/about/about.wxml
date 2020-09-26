@@ -1,4 +1,12 @@
-<image src="../../images/linshi.png" mode="widthFix" style="width: 100%"></image>
+<l-mask show="{{timeline}}" opacity="0.6" l-class="fade" bind:lintap="closeTimeline">
+	<image class="timeline" src="../../images/guide-timeline.png" mode="widthFix"></image>
+</l-mask>
+
+<l-mask show="{{index}}" opacity="0.6" l-class="fade" bind:lintap="closeIndex">
+	<image class="index" src="../../images/guide-index.png" mode="widthFix"></image>
+</l-mask>
+
+<image src="../../images/icon.png" mode="widthFix" style="width: 100%"></image>
 
 <view style="text-align: center;">南工青媒欢迎你</view>
 

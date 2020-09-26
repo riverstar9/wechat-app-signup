@@ -8,40 +8,25 @@ Page({
 
   },
 
-  switchBack: function() {
-    wx.navigateBack({
-      delta: 1
+  peing: function() {
+    wx.navigateTo({
+      url: '../peing-add/peing-add',
     })
-  },
-
-  submit: function(e) {
-    console.log(e)
-    var info = e.detail.value;
-    if (info.text=="") {
-        this.setData({
-          errorInfo: true,
-          errorContent: "请输入内容后再提交~",
-        })
-    } else {
-      db.collection('peing').add({
-        data: {
-          question: info.text,
-          answer: "",
-          number: 0
-        }
-      }).then(res => {
-        this.setData({
-          success: true
-        })
-      })
-    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.cloud.callFunction({
+      name: "getAllPeing",
+      data: {},
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        peingDetails: res.result.data
+      })
+    })
   },
 
   /**
@@ -83,13 +68,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

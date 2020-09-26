@@ -1,1 +1,21 @@
-/* pages/about/about.wxss */
+Page {
+  background-color: white;
+}
+
+.timeline {
+  position: absolute;
+  top: 0rpx;
+  right: 20rpx;
+  width: 700rpx;
+}
+
+.index {
+  position: absolute;
+  top: 0rpx;
+  left: 28rpx;
+  width: 700rpx;
+}
+
+.fade {
+  transition: all 0.5s !important;
+}

@@ -8,9 +8,27 @@ Page({
 
   },
 
-  peing: function() {
+  switch2Help: function() {
+    wx.navigateTo({
+      url: '../help-details/help-details',
+    })
+  },
+
+  switch2Contact: function() {
+    wx.navigateTo({
+      url: '../contact/contact',
+    })
+  },
+
+  switch2Peing: function() {
     wx.navigateTo({
       url: '../peing/peing',
+    })
+  },
+
+  switch2Develop: function() {
+    wx.navigateTo({
+      url: '../develop/develop',
     })
   },
 
@@ -18,15 +36,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      name: "getAllPeing",
-      data: {},
-    }).then(res => {
-      console.log(res)
-      this.setData({
-        peingDetails: res.result.data
-      })
-    })
+
   },
 
   /**
@@ -75,6 +85,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '南工青媒招新啦 赶快打开招新小程序报名吧',
+      path: '/pages/welcome/welcome',
+      imageUrl: "../../images/message.jpg"
+    }
   }
 })

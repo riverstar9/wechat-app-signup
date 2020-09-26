@@ -159,6 +159,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '南工青媒招新啦 赶快打开招新小程序报名吧',
+      path: '/pages/welcome/welcome',
+      imageUrl: "../../images/message.jpg"
+    }
   }
 })

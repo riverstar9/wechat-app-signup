@@ -12,7 +12,42 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var info = wx.getLaunchOptionsSync();
+    switch (info.scene) {
+      case 1154:
+        break;
+      
+      case 1155:
+        this.setData({
+          index: true,
+        })
+        break;
 
+      default:
+        this.setData({
+          timeline: true,
+        })
+        break;
+    }
+
+    setTimeout(() => {
+      this.setData({
+        index: false,
+        timeline: false
+      })
+    }, 8000);
+  },
+
+  closeIndex: function() {
+    this.setData({
+      index: false,
+    })
+  },
+
+  closeTimeline: function() {
+    this.setData({
+      timeline: false,
+    })
   },
 
   /**
@@ -61,6 +96,17 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    return {
+      title: '南工青媒招新啦 赶快打开招新小程序报名吧',
+      path: '/pages/welcome/welcome',
+      imageUrl: "../../images/message.jpg"
+    }
+  },
 
+  onShareTimeline: function () {
+    return {
+      title: "南工青媒招新啦 赶快打开招新小程序报名吧",
+      imageUrl: "../../images/icon.png"
+    }
   }
 })

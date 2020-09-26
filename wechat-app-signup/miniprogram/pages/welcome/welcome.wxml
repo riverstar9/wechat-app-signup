@@ -31,7 +31,7 @@
   l-content-class="dialog-content"
   l-confirm-class="dialog-confirm" />
 
-<!-- <l-toast
+<l-toast
   show="{{showToast}}"
   duration="6500"
-  title="iOS设备可能会在使用中遇到一些问题，我们对此深感抱歉" /> -->
+  title="平板设备可能会在使用中遇到一些问题，请使用手机操作哦" />

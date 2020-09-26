@@ -24,9 +24,9 @@ Page({
 
   requestSubscribe: function() {
     wx.requestSubscribeMessage({
-      tmplIds: ["R72BPq5w-C-4NVFWSm-3B3b3nA6f9wjPxJnn96YTALs"],
+      tmplIds: ["R72BPq5w-C-4NVFWSm-3B2Y8XNxfXwOxcjFQAeh3It8"],
       success: res => {
-        if (res["R72BPq5w-C-4NVFWSm-3B3b3nA6f9wjPxJnn96YTALs"] == "accept") {
+        if (res["R72BPq5w-C-4NVFWSm-3B2Y8XNxfXwOxcjFQAeh3It8"] == "accept") {
           wx.reLaunch({
             url: "../index/index",
           })
@@ -110,13 +110,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

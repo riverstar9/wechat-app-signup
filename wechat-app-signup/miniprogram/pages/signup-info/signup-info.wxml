@@ -25,9 +25,9 @@
 
   <view class="row">
     <view class="region">
-      <text>籍贯</text>
+      <text>籍贯</text><text class="tips">只需选择到市级</text>
       <picker name="region" mode="region" bindchange="bindRegionChange" value="{{userDetails.region}}" custom-item="{{customItem}}">
-        <view class="overflow">{{userDetails.region[0]}} {{userDetails.region[1]}} {{userDetails.region[2]}}</view>
+        <view class="overflow">{{userDetails.region[0]}} {{userDetails.region[1]}}</view>
       </picker>
     </view>
   </view>

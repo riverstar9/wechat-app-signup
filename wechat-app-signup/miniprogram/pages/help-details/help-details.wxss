@@ -1,0 +1,33 @@
+Page {
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+text {
+  color: #ffb400;
+}
+
+.out {
+  padding: 30rpx 50rpx;
+  background-color: white;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.title {
+  margin-top: 50rpx;
+  margin-bottom: 25rpx;
+  margin-left: 5rpx;
+  color: #ffb400;
+  font-size: 56rpx;
+  letter-spacing: 2rpx;
+  transform: skew(-10deg);
+}
+
+.title:after {
+  content: "";
+  display: block;
+  height: 12rpx;
+  width: 650rpx;
+  background-color: #ffb400;
+}

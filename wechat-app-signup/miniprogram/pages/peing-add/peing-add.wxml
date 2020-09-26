@@ -1,0 +1,23 @@
+<view class="title">匿名提问箱</view>
+
+<view class="text"><text>▲</text> 本提问箱<text>完全匿名</text>，回答问题的管理员和其他用户都无法查看你的身份信息</view>
+<view class="text"><text>▲</text> 但互联网并非法外之地，我们有权拒绝展示并删除<text>任何不恰当的信息</text></view>
+<view class="text"><text>●</text> 报名帮助页只会显示<text>已被管理员回答的问题</text>，请耐心等待管理员处理，但不能保证每个问题都被回答</view>
+<view class="text"><text>●</text><text> 较为紧急/个人问题/需要管理员帮助</text>的事项，请移步<text>「联系管理员页」</text></view>
+
+<form bindsubmit="submit">
+	<textarea wx:if="{{!success}}" name="text" placeholder="最多输入140个字" placeholder-class="placeholder" maxlength="140"></textarea>
+  <l-message show="{{errorInfo}}" content="{{errorContent}}" type="error" duration="4500" l-class="error" />
+	<button class="button" form-type="submit">立即提交</button>
+</form>
+
+<l-dialog
+  show="{{success}}"
+  type="alert"
+  title="成功提交"
+  content="请耐心等待回复"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="switchBack" />

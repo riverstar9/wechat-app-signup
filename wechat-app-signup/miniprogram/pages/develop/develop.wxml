@@ -1,4 +1,5 @@
 <view class="box">
+  <view>* 本项目已在Github开源，仓库地址<text>riverstar9/wechat-app-signup</text></view>
   <view>* 使用了<text>Lin UI</text>实现部分组件功能，包括对话框、加载提示、索引列表等</view>
   <view>* 欢迎页的设计方案参考了<text>晓峰音乐公社</text>2019年<text>星巢音乐节</text>海报的设计，背景地图来自<text>高德开放平台</text></view>
   <view>* 首页的设计方案参考了<text>CHUN TSENG KUO</text>发布在Dribbble的设计</view>
@@ -11,6 +12,21 @@
 </view>
 
 <l-steps direction="column" dot="{{true}}" color="#ffb400">
+  <l-step title="0.6.2 2020.9.26">
+    <view class="container" slot="describe">
+      <view>1.重做报名帮助页</view>
+      <view>2.修改了帮助手册中的一些描述</view>
+      <view>3.调整了关于页的遮罩时间</view>
+    </view>
+  </l-step>
+    <l-step title="0.6.1 2020.9.24">
+    <view class="container" slot="describe">
+      <view>1.修改了籍贯的显示方式</view>
+      <view>2.修复了订阅消息的bug</view>
+      <view>3.部分页面新增分享给好友/分享到朋友圈</view>
+      <view>4.新增对平板设备的提示</view>
+    </view>
+  </l-step>
   <l-step title="0.6.0 2020.9.18">
     <view class="container" slot="describe">
       <view>1.修改了二维码的描述文案并增加了关闭按钮</view>

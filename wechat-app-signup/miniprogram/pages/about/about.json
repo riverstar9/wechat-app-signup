@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "l-mask": "../../dist/mask/index"
+  },
   "navigationBarTitleText": "关于青媒"
 }

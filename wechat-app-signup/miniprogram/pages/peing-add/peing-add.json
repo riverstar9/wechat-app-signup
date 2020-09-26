@@ -3,5 +3,5 @@
     "l-message": "../../dist/message/index",
     "l-dialog": "../../dist/dialog/index"
   },
-  "navigationBarTitleText": "匿名提问箱"
+  "navigationBarTitleText": "投递问题"
 }

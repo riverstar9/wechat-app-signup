@@ -69,15 +69,18 @@ Page({
       app.globalData.sns = res.data[0].sns
     })
 
-    // wx.getSystemInfo({
-    //   success: res => {
-    //     if (res.platform == "ios") {
-    //       this.setData({
-    //         showToast: true,
-    //       })
-    //     }
-    //   }
-    // })
+    wx.getSystemInfo({
+      success: res => {
+        console.log(res)
+        if (res.model.indexOf("Pad") != -1) {
+          setTimeout(() => {
+            this.setData({
+              showToast: true,
+            }) 
+          }, 800);
+        }
+      }
+    })
   },
 
   /**
@@ -125,7 +128,11 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  // onShareAppMessage: function () {
-
-  // }
+  onShareAppMessage: function () {
+    return {
+      title: '南工青媒招新啦 赶快打开招新小程序报名吧',
+      path: '/pages/welcome/welcome',
+      imageUrl: "../../images/message.jpg"
+    }
+  }
 })

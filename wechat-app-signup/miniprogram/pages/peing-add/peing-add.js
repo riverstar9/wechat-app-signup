@@ -1,11 +1,40 @@
-// pages/develop/develop.js
-Page({
+const db = wx.cloud.database();
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
 
+  },
+
+  switchBack: function() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+
+  submit: function(e) {
+    console.log(e)
+    var info = e.detail.value;
+    if (info.text=="") {
+        this.setData({
+          errorInfo: true,
+          errorContent: "请输入内容后再提交~",
+        })
+    } else {
+      db.collection('peing').add({
+        data: {
+          question: info.text,
+          answer: "",
+          number: 0
+        }
+      }).then(res => {
+        this.setData({
+          success: true
+        })
+      })
+    }
   },
 
   /**
@@ -55,16 +84,5 @@ Page({
    */
   onReachBottom: function () {
 
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    return {
-      title: '南工青媒招新啦 赶快打开招新小程序报名吧',
-      path: '/pages/welcome/welcome',
-      imageUrl: "../../images/message.jpg"
-    }
   }
 })

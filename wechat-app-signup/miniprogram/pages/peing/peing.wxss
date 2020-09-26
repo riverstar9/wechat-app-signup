@@ -2,81 +2,79 @@ Page {
   font-weight: 900;
 }
 
-.title {
-  margin: 40rpx 0;
-  font-size: 60rpx;
+.box {
+  margin: 20rpx auto;
+  margin-top: 45rpx;
+  padding: 35rpx;
+  width: 600rpx;
+  border: 8rpx solid black;
+  border-radius: 35rpx;
+  background-color: white;
+  font-size: 28rpx;
+}
+
+.peingDetails {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.peingBox {
+  margin: 20rpx auto;
+  padding-bottom: 0rpx;
+}
+
+.row {
+  width: 100%;
+}
+
+.row view {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.row.right {
+  margin-top: 32rpx;
+  text-align: right;
+}
+
+.ch {
+  margin-top: -40rpx;
+  color: #ffb400;
+  font-size: 108rpx;
   transform: skew(-10deg);
-  text-align: center;
-  color: transparent;  
-  -webkit-text-stroke: 3rpx #ffb400;  
+  opacity: 0.6;
 }
 
 .text {
-  margin: 10rpx 50rpx;
-  font-size: 24rpx;
+  width: 80%;
+  word-wrap: break-word;
+  word-break: normal;
 }
 
-.text>text {
-  color: #ffb400;
+.text.q {
+  margin-left: 28rpx;
 }
 
-textarea{
-  margin: 50rpx auto;
-  padding: 15rpx 25rpx;
-  height: 380rpx;
-  height: 500rpx;
-  width: 610rpx;
-  border: 10rpx solid black;
-  border-radius: 40rpx;
-  font-size: 40rpx;
+.text.a {
+  margin-right: 28rpx;
 }
 
-.placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.button {
-  margin: 65rpx auto;
-  padding: 0;
-  outline: 0;
+.peing-container {
+  position: fixed;
+  right: 50rpx;
+  bottom: 80rpx;
+  z-index: 2;
+  width: 100rpx;
   height: 100rpx;
-  width: 500rpx;
-  background-color: white;
-  border: 10rpx solid black;
-  border-radius: 35rpx;
-  box-shadow: 0 12rpx #ffb400;
-  font-size: 45rpx;
-  font-weight: 900;
-  letter-spacing: 2rpx;
-  line-height: 75rpx;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px 0px #ffb3003d;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
 }
 
-.button>button::after {
-  border: none;
-}
-
-.dialog {
-  align-items: flex-end !important;
-  border: 12rpx solid black;
-  border-radius: 0 !important;
-  font-weight: 900 !important;
-}
-
-.dialog-title {
-  margin-right: 5rpx;
-  font-size: 48rpx !important;
-  color: black !important;
-}
-
-.dialog-content {
-  margin-right: 5rpx;
-  font-size: 36rpx !important;
-  color: black !important;
-}
-
-.dialog-confirm {
-  font-size: 36rpx !important;
-  /* color: #ffc300; */
-  color: black !important ;
-  background-color: #fee183;
+.peing-img {
+  width: 50rpx;
+  height: 50rpx;
 }
