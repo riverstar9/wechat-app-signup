@@ -9,18 +9,7 @@
 <view class="text"><text>●</text> 二维码推荐<text>长按保存</text>，您也可以<text>在首页轻按头像</text>重新获取</view>
 <view class="text"><text>●</text> 二维码中含有隐私信息，<text>请不要分享给他人</text></view>
 
-<view class="button" bindtap="requestSubscribe">回到首页</view>
-
-<l-dialog
-  show="{{subscribeFailed}}"
-  type="alert"
-  title="问题出现"
-  content="请允许消息订阅以获得审核结果通知"
-  l-class="dialog"
-  l-title-class="dialog-title"
-  l-content-class="dialog-content"
-  l-confirm-class="dialog-confirm"
-  bind:linconfirm="requestSubscribe" />
+<view class="button" bindtap="switch2Index">回到首页</view>
 
 <l-mask show="{{showMask}}" opacity="0.6" center="{{true}}">
   <l-loading show="{{showLoading}}" size="large" color="#fee183" full-screen="{{true}}" bg-color="transparent"></l-loading>

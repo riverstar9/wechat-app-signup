@@ -54,29 +54,3 @@ textarea{
 .button>button::after {
   border: none;
 }
-
-.dialog {
-  align-items: flex-end !important;
-  border: 12rpx solid black;
-  border-radius: 0 !important;
-  font-weight: 900 !important;
-}
-
-.dialog-title {
-  margin-right: 5rpx;
-  font-size: 48rpx !important;
-  color: black !important;
-}
-
-.dialog-content {
-  margin-right: 5rpx;
-  font-size: 36rpx !important;
-  color: black !important;
-}
-
-.dialog-confirm {
-  font-size: 36rpx !important;
-  /* color: #ffc300; */
-  color: black !important ;
-  background-color: #fee183;
-}

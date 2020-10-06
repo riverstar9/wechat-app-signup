@@ -11,8 +11,8 @@ Page({
 
   switch2Signup: function() {
     if (app.globalData.userStatus.isAdmin == 1) {
-      wx.navigateTo({
-        url: '../admin/admin',
+      wx.reLaunch({
+        url: "../admin/admin",
       })
     } else {
       wx.navigateTo({

@@ -12,6 +12,13 @@
 </view>
 
 <l-steps direction="column" dot="{{true}}" color="#ffb400">
+  <l-step title="0.6.3 2020.10.6">
+    <view class="container" slot="describe">
+      <view>1.填写报名信息时两个志愿部门不能相同</view>
+      <view>2.调整了订阅顺序/部分文案/对话框样式</view>
+      <view>3.又修复了管理员列表分组/帮助页样式</view>
+    </view>
+  </l-step>
   <l-step title="0.6.2 2020.9.26">
     <view class="container" slot="describe">
       <view>1.重做报名帮助页</view>
@@ -19,7 +26,7 @@
       <view>3.调整了关于页的遮罩时间</view>
     </view>
   </l-step>
-    <l-step title="0.6.1 2020.9.24">
+  <l-step title="0.6.1 2020.9.24">
     <view class="container" slot="describe">
       <view>1.修改了籍贯的显示方式</view>
       <view>2.修复了订阅消息的bug</view>

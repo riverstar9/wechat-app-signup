@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "l-message": "../../dist/message/index",
-    "l-loading": "../../dist/loading/index"
+    "l-loading": "../../dist/loading/index",
+    "l-dialog": "../../dist/dialog/index"
   },
   "navigationBarTitleText": "信息填写"
 }

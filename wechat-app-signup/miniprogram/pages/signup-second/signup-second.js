@@ -22,13 +22,32 @@ Page({
     })
   },
 
-  requestSubscribe: function() {
+  switch2Index: function() {
+    wx.reLaunch({
+      url: "../index/index",
+    })
+  },
+
+  getInfo: function(e) {
     wx.requestSubscribeMessage({
       tmplIds: ["R72BPq5w-C-4NVFWSm-3B2bLNvbmMVD3PgKXMZrRou8"],
       success: res => {
         if (res["R72BPq5w-C-4NVFWSm-3B2bLNvbmMVD3PgKXMZrRou8"] == "accept") {
-          wx.reLaunch({
-            url: "../index/index",
+          this.setData({
+            showLoading: true,
+          })
+          wx.cloud.callFunction({
+            name: "updateData",
+            data: {
+              code: "signupSecond",
+              secondInterviewTime: e.detail.value.secondInterviewTime,
+            },
+            success: res => {
+              this.setData({
+                showLoading: false,
+                showDialog: true,
+              })
+            },
           })
         } else {
           this.setData({
@@ -36,26 +55,6 @@ Page({
           })
         }
       }
-    })
-  },
-
-  getInfo: function(e) {
-    console.log(e)
-    this.setData({
-      showLoading: true,
-    })
-    wx.cloud.callFunction({
-      name: "updateData",
-      data: {
-        code: "signupSecond",
-        secondInterviewTime: e.detail.value.secondInterviewTime,
-      },
-      success: res => {
-        this.setData({
-          showLoading: false,
-          showDialog: true,
-        })
-      },
     })
   },
 

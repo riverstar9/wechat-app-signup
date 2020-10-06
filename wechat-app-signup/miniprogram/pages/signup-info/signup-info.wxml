@@ -113,3 +113,13 @@
   bg-color="rgb(0,0,0)"
   opacity="0.4"
   full-screen="{{true}}" />
+
+<l-dialog
+  show="{{subscribeFailed}}"
+  type="alert"
+  title="问题出现"
+  content="请允许消息订阅以获得审核结果通知"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm" />

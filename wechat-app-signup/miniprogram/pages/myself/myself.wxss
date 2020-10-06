@@ -163,28 +163,3 @@ Page {
   text-align: center;
   line-height: 72rpx;
 }
-
-.dialog {
-  align-items: flex-end !important;
-  border: 12rpx solid black;
-  border-radius: 0rpx !important;
-  font-weight: 900 !important;
-}
-
-.dialog-title {
-  margin: 10rpx 0 0 5rpx;
-  font-size: 48rpx !important;
-  color: black !important;
-}
-
-.dialog-content {
-  margin-left: 5rpx;
-  font-size: 36rpx !important;
-  color: black !important;
-}
-
-.dialog-confirm {
-  font-size: 36rpx !important;
-  color: black !important ;
-  background-color: #fee183;
-}

@@ -59,7 +59,7 @@
   l-title-class="dialog-title"
   l-content-class="dialog-content"
   l-confirm-class="dialog-confirm"
-  bind:linconfirm="requestSubscribe" />
+  bind:linconfirm="switch2Index" />
 
 <l-dialog
   show="{{subscribeFailed}}"
@@ -69,8 +69,7 @@
   l-class="dialog"
   l-title-class="dialog-title"
   l-content-class="dialog-content"
-  l-confirm-class="dialog-confirm"
-  bind:linconfirm="requestSubscribe" />
+  l-confirm-class="dialog-confirm" />
 
 <l-loading
   show="{{showLoading}}"

@@ -73,23 +73,9 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "pages/help-details/help-details",
-					"pathName": "pages/help-details/help-details",
-					"query": "",
-					"scene": 1000
-				},
-				{
-					"id": -1,
-					"name": "pages/about/about",
-					"pathName": "pages/about/about",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/signup-qrcode/signup-qrcode",
-					"pathName": "pages/signup-qrcode/signup-qrcode",
+					"id": 5,
+					"name": "pages/admin/admin",
+					"pathName": "pages/admin/admin",
 					"query": "",
 					"scene": null
 				}

@@ -19,7 +19,7 @@
 	<view class="status {{showDetails?'off':''}}">
 		<block wx:if="{{status == 11}}">
 			<view>您还没有进行信息填写</view>
-			<view>请移步至「首页-加入青媒」进行信息填写</view>
+			<view>请移步至「首页-报名流程」进行信息填写</view>
 		</block>
 		<block wx:if="{{status == 12}}">
 			<view class="info">您填写的信息正在审核中</view>
@@ -35,7 +35,7 @@
 		</block>
 		<block wx:if="{{status == 22}}">
 			<view class="info">恭喜您 通过了信息审核环节</view>
-			<view class="info">请移步至「首页-加入青媒」选择第一次面试时间</view>
+			<view class="info">请移步至「首页-报名流程」选择第一次面试时间</view>
 		</block>
 		<block wx:if="{{status == 23}}">
 			<view class="info">恭喜您 通过了信息审核环节</view>
@@ -47,7 +47,7 @@
 		</block>
 		<block wx:if="{{status == 32}}">
 			<view class="info">恭喜您 通过了第一次面试</view>
-			<view class="info">请移步至「首页-加入青媒」选择第二次面试时间</view>
+			<view class="info">请移步至「首页-报名流程」选择第二次面试时间</view>
 		</block>
 		<block wx:if="{{status == 33}}">
 			<view class="info">恭喜您 通过了第一次面试</view>
@@ -59,7 +59,7 @@
 		</block>
 		<block wx:if="{{status == 42}}">
 			<view class="info">恭喜您 通过了所有的面试</view>
-			<view class="info">请移步至「首页-加入青媒」与我们取得联系</view>
+			<view class="info">请移步至「首页-报名流程」与我们取得联系</view>
 		</block>
 		<block wx:if="{{status == 0}}">
 			<view class="info">出现了一些小问题</view>
@@ -71,7 +71,7 @@
 <view class="details {{showDetails?'on':'off'}}">
 	<block wx:if="{{status == 11}}">
 		<view class="info">您还没有进行信息填写</view>
-		<view class="info">请移步至「首页-加入青媒」进行信息填写</view>
+		<view class="info">请移步至「首页-报名流程」进行信息填写</view>
 	</block>
 	<block wx:else>
 		<view>

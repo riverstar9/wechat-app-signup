@@ -26,9 +26,9 @@ exports.main = async (event, context) => {
             editTimes: -1,
             switchTo: -1,
             firstInterview: -1,
-            firstInterviewTime: 99,
+            firstInterviewTime: 9,
             secondInterview: -1,
-            secondInterviewTime: 99,
+            secondInterviewTime: 9,
             result: -1,
             evaluate: [],
           }

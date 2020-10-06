@@ -1,4 +1,4 @@
-@import "../help/help.wxss";
+@import "../help-details/help-details.wxss";
 
 Page {
   background-color: #a3daff;

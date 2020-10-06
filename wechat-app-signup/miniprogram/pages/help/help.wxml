@@ -24,7 +24,7 @@
 		<view class="box">
 			<image src="../../images/help1.jpg" mode="heightFix"></image>
 			<view class="introduce">
-				<view>轻按首页加入青媒</view>
+				<view>轻按首页报名流程</view>
 				<view class="little">即可查看完整的报名流程及引导</view>
 				<view class="little">立即填写报名信息加入我们吧</view>
 			</view>
@@ -75,7 +75,7 @@
 			<image src="../../images/help6.jpg" mode="heightFix"></image>
 			<view class="introduce">
 				<view>需要更多帮助?</view>
-				<view class="little">本页上方提供了三个按钮</view>
+				<view class="little">本页上方提供了三个选项</view>
 				<view class="little">请按照需求选择途径解决问题</view>
 			</view>
 		</view>

@@ -30,7 +30,7 @@ Page({
     ],
     sortItem3: [
       {id: 0, value: 99, name: '所有时间', isChecked: true},
-      {id: 1, value: -1, name: '尚未预约', isChecked: false},
+      {id: 1, value: 9, name: '尚未预约', isChecked: false},
       {id: 2, value: 0, name: '时间段1', isChecked: false},
       {id: 3, value: 1, name: '时间段2', isChecked: false},
       {id: 4, value: 2, name: '时间段3', isChecked: false},

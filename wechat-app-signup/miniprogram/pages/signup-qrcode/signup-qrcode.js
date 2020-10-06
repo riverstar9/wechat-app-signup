@@ -9,20 +9,9 @@ Page({
 
   },
 
-  requestSubscribe: function() {
-    wx.requestSubscribeMessage({
-      tmplIds: ["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"],
-      success: res => {
-        if (res["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"] == "accept") {
-          wx.reLaunch({
-            url: "../index/index",
-          })
-        } else {
-          this.setData({
-            subscribeFailed: true
-          })
-        }
-      }
+  switch2Index: function() {
+    wx.reLaunch({
+      url: "../index/index",
     })
   },
 

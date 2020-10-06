@@ -70,7 +70,7 @@ swiper {
   color: #ffb400;
   font-size: 64rpx;
   text-align: end;
-  -webkit-text-stroke: 3rpx white;
+  -webkit-text-stroke: 3.5rpx white;
   z-index: 10;
 }
 

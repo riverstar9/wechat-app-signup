@@ -76,7 +76,7 @@ exports.main = async (event, context) => {
               value: resultText,
             },
             thing8: {
-              value: '请打开小程序查看审核结果'
+              value: '轻按打开小程序「报名流程页」查看审核结果'
             }
           },
           miniprogramState: 'formal'

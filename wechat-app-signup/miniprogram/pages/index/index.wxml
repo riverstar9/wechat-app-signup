@@ -3,13 +3,13 @@
 <view class="avatar" style="background-image:url({{avatarUrl}});" bindtap="switch2Myself"></view>
 
 <view class="buttons">
-  <view class="signup" hover-class="button-hover" bindtap="switch2Signup">加入青媒_</view>
+  <view class="signup" hover-class="button-hover" bindtap="switch2Signup">报名流程_</view>
   <view class="help" hover-class="button-hover" bindtap="switch2Help">报名帮助_</view>
   <view class="about" hover-class="button-hover" bindtap="switch2About">关于青媒_</view>
 </view>
 
 <swiper class="tips" autoplay="true" interval="3500" circular="true" vertical="true">
-  <swiper-item><text>※ 轻按加入青媒 马上报名加入我们吧!</text></swiper-item>
+  <swiper-item><text>※ 轻按报名流程 马上报名加入我们吧!</text></swiper-item>
   <swiper-item><text>※ 感到迷茫? 试试查看报名帮助吧!</text></swiper-item>
   <swiper-item><text>※ 轻按右上角头像可查看个人信息</text></swiper-item>
   <swiper-item><text>※ 轻按个人信息页按钮可联系管理员</text></swiper-item>

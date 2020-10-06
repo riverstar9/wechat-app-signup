@@ -85,29 +85,45 @@ Page({
     } else if (info.phone.length!=11) {
       this.setData({
         errorInfo: true,
-        errorContent: "手机号格式错误，请稍作检查后再次提交",
+        errorContent: "姓名格式错误，请填写中文姓名",
       })
     } else if (that.isChinese(info.username)) {
       this.setData({
         errorInfo: true,
-        errorContent: "姓名格式错误，请填写中文姓名",
+        errorContent: "手机号格式错误，请稍作检查后再次提交",
+      })
+    } else if (parseInt(info.dep1)+1==parseInt(info.dep2)) {
+      this.setData({
+        errorInfo: true,
+        errorContent: "一志愿部门不能和二志愿相同",
       })
     } else {
       app.globalData.userDetails = info;
-      this.setData({
-        showLoading: true,
-      })
-      wx.cloud.callFunction({
-        name: "updateData",
-        data: {
-          code: "signupInfo",
-          userDetails: info,
-        },
+      wx.requestSubscribeMessage({
+        tmplIds: ["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"],
         success: res => {
-          wx.reLaunch({
-            url: "../signup-qrcode/signup-qrcode",
-          })
-        },
+          if (res["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"] == "accept") {
+            this.setData({
+              showLoading: true,
+            })
+            wx.cloud.callFunction({
+              name: "updateData",
+              data: {
+                code: "signupInfo",
+                userDetails: info,
+              },
+              success: res => {
+                wx.reLaunch({
+                  url: "../signup-qrcode/signup-qrcode",
+                })
+              },
+            })
+          } else {
+            this.setData({
+              subscribeFailed: true
+            })
+          }
+        }
       })
     }
   },

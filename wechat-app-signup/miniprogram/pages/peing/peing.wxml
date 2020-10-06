@@ -2,7 +2,7 @@
 	<view>以下是对匿名提问箱中问题的回答</view>
 	<view>轻按右下角的加号可以向提问箱投递新问题</view>
 	<view style="color: #ffb400;">较为紧急/个人问题/需要管理员帮助的事项</view>
-	<view style="color: #ffb400;">请移步{{"<"}}个人信息{{">"}}页联系管理员</view>
+	<view style="color: #ffb400;">请移步「联系管理员」页</view>
 </view>
 
 <view class="peingDetails">
