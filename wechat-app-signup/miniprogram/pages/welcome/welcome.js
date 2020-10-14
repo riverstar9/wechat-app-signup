@@ -8,12 +8,16 @@ Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     titleArray: [
-      ["以梦为马", "诗酒年华"],
+      ["以梦为马", "不负韶华"],
       ["真实报道", "真情创作", "公平正义", "理性引导"],
-      ["", "", "", ""],
-      ["", "", "", ""],
-      ["", "", "", ""],
-      ["", "", "", ""],
+      ["明德 厚学", "沉毅 笃行", "", ""],
+      ["生命", "因你", "而火热", ""],
+      ["今晚的风", "没有颜色", "", ""],
+      ["是谁来自", "山川湖海", "", ""],
+      ["和光同尘", "与时舒卷", "", ""],
+      ["山有扶苏", "隰有荷华", "", ""],
+      ["疏影横斜", "水清浅", "暗香浮动", "月黄昏"],
+      ["404", "not", "found", ""],
     ]
   },
 
@@ -54,12 +58,12 @@ Page({
    */
   onLoad: function (options) {
     let min = 0;
-    let max = 1;
+    let max = 9;
     let magic;
     magic = Math.floor(Math.random()*(max-min+1)+min);
     this.setData({
       title: magic,
-      // title: 1,
+      // title: 0,
     })
 
     db.collection("cloudStatus").get().then(res => {
@@ -67,6 +71,7 @@ Page({
       app.globalData.timeArray1 = res.data[0].timeArray1
       app.globalData.timeArray2 = res.data[0].timeArray2
       app.globalData.sns = res.data[0].sns
+      app.globalData.answer = res.data[0].answer
     })
 
     wx.getSystemInfo({

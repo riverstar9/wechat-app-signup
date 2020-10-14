@@ -1,9 +1,12 @@
 <view class="box">
 	<view>以下是对匿名提问箱中问题的回答</view>
-	<view>轻按右下角的加号可以向提问箱投递新问题</view>
+	<!-- <view>轻按右下角的加号可以向提问箱投递新问题</view>
 	<view style="color: #ffb400;">较为紧急/个人问题/需要管理员帮助的事项</view>
-	<view style="color: #ffb400;">请移步「联系管理员」页</view>
+	<view style="color: #ffb400;">请移步「联系管理员」页</view> -->
+	<view style="color: #ffb400;">暂时无法添加新问题</view>
 </view>
+
+<l-loadmore show="{{!hideLoading}}" type="loading" loading-text="努力加载中~" color="#ffb400" />
 
 <view class="peingDetails">
 	<view class="box peingBox" wx:for="{{peingDetails}}" wx:key="index">
@@ -18,6 +21,6 @@
 	</view>
 </view>
 
-<view class="peing-container" bindtap="peing">
+<!-- <view class="peing-container" bindtap="peing">
 	<image src='../../images/add.svg' class='peing-img'></image>
-</view>
+</view> -->

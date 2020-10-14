@@ -1,6 +1,6 @@
-const db = wx.cloud.database();
-
+// pages/about-details/about-details.js
 Page({
+
   /**
    * 页面的初始数据
    */
@@ -8,24 +8,16 @@ Page({
 
   },
 
-  peing: function() {
-    wx.navigateTo({
-      url: '../peing-add/peing-add',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      name: "getAllPeing",
-      data: {},
-    }).then(res => {
-      console.log(res)
-      this.setData({
-        peingDetails: res.result.data,
-        hideLoading: true
+    const eventChannel = this.getOpenerEventChannel();
+    var that = this;
+    eventChannel.on('acceptDataFromOpenerPage', function(data) {
+      console.log(data.id)
+      that.setData({
+        src: data.id,
       })
     })
   },
@@ -69,6 +61,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
 
   }
 })

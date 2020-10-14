@@ -8,11 +8,23 @@ Page({
 
   },
 
+  switch2Details: function(e) {
+    console.log(e.currentTarget.id)
+    wx.navigateTo({
+      url: "../about-details/about-details",
+      success: function(res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', {id: e.currentTarget.id})
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var info = wx.getLaunchOptionsSync();
+    console.log(info)
     switch (info.scene) {
       case 1154:
         break;

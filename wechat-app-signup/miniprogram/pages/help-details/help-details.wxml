@@ -1,8 +1,11 @@
 <view class="out">
-	<view>帮助手册介绍了小程序的大部分界面和使用中可能发生的情况，若遇到下面没有提到的问题，欢迎通过「联系管理员」页或「匿名提问箱」和我们取得联系</view>
-	<view>您可以通过标题快速找到自己遇到的问题</view>
+	<view>帮助手册介绍了小程序的大部分界面和使用中可能发生的情况，您可以通过标题快速找到自己遇到的问题</view>
 	<view><text>网络状态一般时，部分图片可能无法加载，重新打开页面即可解决</text></view>
 	<view><text>请不要通过收藏小程序的方法进入小程序，可能会出现无法获取数据的问题</text></view>
+
+	<view class="title">First of all</view>
+	<view style="color: red;"><text>● </text>整个小程序的所有内容都由开发者一个人完成，各种各样的问题都有可能发生，遇到问题请耐心等待处理</view>
+	<view><text>● </text>若遇到下面没有提到的问题，欢迎通过<text>「联系管理员」</text>页或<text>「匿名提问箱」</text>和开发者取得联系</view>
 
 	<view class="title">主页</view>
 	<view><text>● </text>首页可以跳转到四个页面：<text>「个人信息页」「报名流程页」「报名帮助页」「关于青媒页」</text></view>

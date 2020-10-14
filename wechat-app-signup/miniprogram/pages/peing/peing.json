@@ -1,7 +1,6 @@
 {
   "usingComponents": {
-    "l-message": "../../dist/message/index",
-    "l-dialog": "../../dist/dialog/index"
+    "l-loadmore": "../../dist/loadmore/index"
   },
   "navigationBarTitleText": "匿名提问箱"
 }

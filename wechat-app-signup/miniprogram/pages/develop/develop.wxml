@@ -1,7 +1,7 @@
 <view class="box">
   <view>* 本项目已在Github开源，仓库地址<text>riverstar9/wechat-app-signup</text></view>
   <view>* 使用了<text>Lin UI</text>实现部分组件功能，包括对话框、加载提示、索引列表等</view>
-  <view>* 欢迎页的设计方案参考了<text>晓峰音乐公社</text>2019年<text>星巢音乐节</text>海报的设计，背景地图来自<text>高德开放平台</text></view>
+  <view>* 欢迎页的设计方案参考了<text>晓峰音乐公社</text>2019年<text>星巢音乐节</text>海报的设计，背景来自<text>高德开放平台</text></view>
   <view>* 首页的设计方案参考了<text>CHUN TSENG KUO</text>发布在Dribbble的设计</view>
   <view>* 部分插画来自于<text>manypixels</text></view>
   <view>* 联系管理员页插画来自<text>さざ波 小波</text>的<text>わに</text><text style="color: gainsboro;">（其实是管理员常用的头像）</text></view>
@@ -12,9 +12,16 @@
 </view>
 
 <l-steps direction="column" dot="{{true}}" color="#ffb400">
+  <l-step title="0.7.0 2020.10.13">
+    <view class="container" slot="describe">
+      <view>1.新增了好多条欢迎页文案</view>
+      <view>2.匿名提问箱新增加载提示</view>
+      <view>3.完善关于页/联系管理员页</view>
+    </view>
+  </l-step>
   <l-step title="0.6.4 2020.10.6">
     <view class="container" slot="describe">
-      <view>【口腔健康 全身健康 均衡饮食限糖减酸 洁白牙齿灿烂微笑】</view>
+      <view><text>【口腔健康 全身健康 均衡饮食限糖减酸 洁白牙齿灿烂微笑】</text></view>
       <view>1.接入小程序客服消息功能</view>
     </view>
   </l-step>

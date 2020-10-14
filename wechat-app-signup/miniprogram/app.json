@@ -11,6 +11,7 @@
     "pages/help/help",
     "pages/help-details/help-details",
     "pages/about/about",
+    "pages/about-details/about-details",
     "pages/myself/myself",
     "pages/contact/contact",
     "pages/develop/develop",
