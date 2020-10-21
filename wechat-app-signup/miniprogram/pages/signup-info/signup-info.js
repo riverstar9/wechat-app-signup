@@ -72,57 +72,59 @@ Page({
     return false;
   },
 
-  getInfo: function(e) {
+  uploadNow: function(e) {
     console.log(e)
+    console.log("info")
     var that = this;
     var info = e.detail.value;
     if (info.username=="" || info.academy==0 || info.subject=="" || info.dorm=="" || info.phone=="" ||
       info.sns=="" || info.dep1==0 || info.dep2==0 || info.introduce=="") {
+        console.log("empty")
         this.setData({
           errorInfo: true,
           errorContent: "有部分信息没有填写，请稍作检查后再次提交",
         })
-    } else if (info.phone.length!=11) {
+    } else if (that.isChinese(info.username)) {
+      console.log("chi")
       this.setData({
         errorInfo: true,
         errorContent: "姓名格式错误，请填写中文姓名",
       })
-    } else if (that.isChinese(info.username)) {
+    } else if (info.phone.length!=11) {
+      console.log("phone")
       this.setData({
         errorInfo: true,
         errorContent: "手机号格式错误，请稍作检查后再次提交",
       })
     } else if (parseInt(info.dep1)+1==parseInt(info.dep2)) {
+      console.log("yes")
       this.setData({
         errorInfo: true,
         errorContent: "一志愿部门不能和二志愿相同",
       })
     } else {
+      console.log("mess")
       app.globalData.userDetails = info;
-      wx.requestSubscribeMessage({
-        tmplIds: ["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"],
+      this.setData({
+        showLoading: true,
+      })
+      wx.cloud.callFunction({
+        name: "updateData",
+        data: {
+          code: "signupInfo",
+          userDetails: info,
+        },
         success: res => {
-          if (res["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"] == "accept") {
-            this.setData({
-              showLoading: true,
-            })
-            wx.cloud.callFunction({
-              name: "updateData",
-              data: {
-                code: "signupInfo",
-                userDetails: info,
-              },
-              success: res => {
-                wx.reLaunch({
-                  url: "../signup-qrcode/signup-qrcode",
-                })
-              },
-            })
-          } else {
-            this.setData({
-              subscribeFailed: true
-            })
-          }
+          console.log("move")
+          wx.reLaunch({
+            url: "../signup-qrcode/signup-qrcode",
+          })
+        },
+        fail: res => {
+          console.log("movefailed")
+          this.setData({
+            failed: true,
+          })
         }
       })
     }

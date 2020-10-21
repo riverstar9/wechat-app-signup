@@ -26,6 +26,29 @@ Page({
     }, 50000)
   },
 
+  message: function() {
+    wx.requestSubscribeMessage({
+      tmplIds: ["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"],
+      success: res => {
+        console.log("messok")
+        if (res["R72BPq5w-C-4NVFWSm-3B-JkTI-a0HrqcwXYDbtCse0"] == "accept") {
+          console.log("set")
+          this.setData({
+            subscribeSucceed: true
+          })
+        } else {
+          console.log("setfailed")
+          this.setData({
+            subscribeFailed: true
+          })
+        }
+      },
+      fail: res => {
+        console.log("messfailed")
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -29,31 +29,24 @@ Page({
   },
 
   getInfo: function(e) {
-    wx.requestSubscribeMessage({
-      tmplIds: ["R72BPq5w-C-4NVFWSm-3B2bLNvbmMVD3PgKXMZrRou8"],
+    this.setData({
+      showLoading: true,
+    })
+    wx.cloud.callFunction({
+      name: "updateData",
+      data: {
+        code: "signupSecond",
+        secondInterviewTime: e.detail.value.secondInterviewTime,
+      },
       success: res => {
-        if (res["R72BPq5w-C-4NVFWSm-3B2bLNvbmMVD3PgKXMZrRou8"] == "accept") {
-          this.setData({
-            showLoading: true,
-          })
-          wx.cloud.callFunction({
-            name: "updateData",
-            data: {
-              code: "signupSecond",
-              secondInterviewTime: e.detail.value.secondInterviewTime,
-            },
-            success: res => {
-              this.setData({
-                showLoading: false,
-                showDialog: true,
-              })
-            },
-          })
-        } else {
-          this.setData({
-            subscribeFailed: true
-          })
-        }
+        wx.reLaunch({
+          url: "../signup-subscribe/signup-subscribe",
+        })
+      },
+      fail: res => {
+        this.setData({
+          failed: true,
+        })
       }
     })
   },

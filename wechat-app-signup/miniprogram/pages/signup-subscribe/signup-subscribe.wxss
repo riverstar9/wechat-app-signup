@@ -1,0 +1,10 @@
+@import "../error/error";
+
+.text {
+  margin: 10rpx 50rpx;
+  font-size: 24rpx;
+}
+
+.text>text {
+  color: #ffb400;
+}

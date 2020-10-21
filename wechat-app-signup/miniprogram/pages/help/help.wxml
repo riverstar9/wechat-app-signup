@@ -11,11 +11,11 @@
 		</view>
 		<view class="text">联系管理员</view>
 	</view>
-	<view class="sub subLast flex" bindtap="switch2Peing">
+	<view class="sub subLast flex" bindtap="switch2Develop">
 		<view class="icon flex">
 			<image src="../../images/peing.svg" mode="widthFix"></image>
 		</view>
-		<view class="text">匿名提问箱</view>
+		<view class="text">关于小程序</view>
 	</view>
 </view>
 

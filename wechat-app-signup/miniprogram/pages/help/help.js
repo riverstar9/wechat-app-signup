@@ -20,12 +20,6 @@ Page({
     })
   },
 
-  switch2Peing: function() {
-    wx.navigateTo({
-      url: '../peing/peing',
-    })
-  },
-
   switch2Develop: function() {
     wx.navigateTo({
       url: '../develop/develop',

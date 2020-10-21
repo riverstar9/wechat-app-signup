@@ -1,0 +1,172 @@
+Page {
+  font-weight: 900;
+}
+
+.timeline {
+  position: absolute;
+  top: 0rpx;
+  right: 20rpx;
+  width: 700rpx;
+}
+
+.index {
+  position: absolute;
+  top: 0rpx;
+  left: 28rpx;
+  width: 700rpx;
+}
+
+text {
+  color: #ffb400;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50rpx;
+  font-size: 26rpx;
+}
+
+.line {
+  height: 50rpx;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 100rpx;
+}
+
+.title image {
+  margin: 30rpx 0;
+  height: 10vh;
+  background-color: white;
+  border: 12rpx solid white;
+  border-radius: 50%;
+  box-shadow: 0 8rpx #ffb400;
+}
+
+.title .littleTitle {
+  color: #ffb400;
+  font-size: 50rpx;
+  text-align: right;
+}
+
+.title .bigTitle {
+  position: relative;
+  color: #ffb40040;
+  font-size: 100rpx;
+  line-height: 110rpx;
+  text-align: right;
+}
+
+.title .bigTitle::after {
+  content: "青年传媒中心";
+  color: #ffb400;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: ellipse(150rpx 150rpx at -20% 50%);
+  clip-path: ellipse(150rpx 150rpx at -20% 50%);
+  animation: spotlight 6s infinite;
+}
+
+@keyframes spotlight {
+  0% {
+    -webkit-clip-path: ellipse(150rpx 150rpx at -10% 50%);
+    clip-path: ellipse(150rpx 150rpx at -10% 50%);
+  }
+  
+  50% {
+    -webkit-clip-path: ellipse(150rpx 150rpx at 110% 50%);
+    clip-path: ellipse(150rpx 150rpx at 110% 50%);
+  }
+  
+  100% {
+    -webkit-clip-path: ellipse(150rpx 150rpx at -10% 50%);
+    clip-path: ellipse(150rpx 150rpx at -10% 50%);
+  }
+}
+
+.swiper1 {
+  width: 100%;
+  height: 150rpx;
+  pointer-events: none;
+}
+
+.swiper1 .text {
+  padding: 0;
+  height: 100%;
+}
+
+.swiper2 {
+  margin-bottom: 50rpx;
+  width: 100%;
+  height: 1350rpx;
+}
+
+.swiper2 .article {
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+}
+
+.swiper2 .articleImage {
+  width: 100%;
+}
+
+.swiper2 .number {
+  color: rgb(158, 158, 158);
+  font-size: 20rpx;
+}
+
+.swiper3 {
+  margin-bottom: 50rpx;
+  width: 100%;
+  height: 950rpx;
+}
+
+.swiper2 swiper-item, .swiper3 swiper-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper2 .box, .swiper3 .box {
+  padding: 50rpx;
+  padding-top: 60rpx;
+  position: relative;
+  width: 520rpx;
+  height: 650rpx;
+  box-shadow: 0 8rpx #ffb400;
+  border-radius: 35rpx;
+  background-color: white;
+}
+
+.swiper2 .box {
+  padding-top: 80rpx;
+  height: 1080rpx;
+}
+
+.swiper2 .box .introduce, .swiper3 .box .introduce {
+  position: absolute;
+  right: -35rpx;
+  top: -50rpx;
+  color: #ffb400;
+  font-size: 70rpx;
+  text-align: end;
+  transform: skew(-10deg);
+  -webkit-text-stroke: 3.5rpx white;
+  z-index: 10;
+}
+
+.swiper3 .box .h1 {
+  color: #ffb400;
+  font-size: 36rpx;
+}
+
+.swiper3 .box .h2 {
+  font-size: 24rpx;
+}

@@ -51,21 +51,10 @@
 </view>
 
 <l-dialog
-  show="{{showDialog}}"
-  type="alert"     
-  title="提交成功"
-  content="轻按确认返回主页"
-  l-class="dialog"
-  l-title-class="dialog-title"
-  l-content-class="dialog-content"
-  l-confirm-class="dialog-confirm"
-  bind:linconfirm="switch2Index" />
-
-<l-dialog
-  show="{{subscribeFailed}}"
+  show="{{failed}}"
   type="alert"
-  title="问题出现"
-  content="请允许消息订阅以获得审核结果通知"
+  title="提交失败"
+  content="请重新打开小程序再次提交"
   l-class="dialog"
   l-title-class="dialog-title"
   l-content-class="dialog-content"

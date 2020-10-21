@@ -117,6 +117,13 @@ Page({
     }
   },
 
+  onShareTimeline: function () {
+    return {
+      title: "南工青媒招新啦 赶快打开招新小程序报名吧",
+      imageUrl: "../../images/icon.png"
+    }
+  },
+
   onPullDownRefresh() {
     db.collection("cloudStatus").get().then(res => {
       app.globalData.appStatus = res.data[0].appStatus

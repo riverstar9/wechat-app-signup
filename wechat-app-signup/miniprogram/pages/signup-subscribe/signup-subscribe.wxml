@@ -1,0 +1,33 @@
+<view class="title flex">
+  <text>提交成功!</text>
+</view>
+
+<view class="pic flex">
+  <image src="../../images/subscribe.svg"></image>
+</view>
+
+<view class="text"><text>▲</text> 审核结果将于不久后通过<text>微信服务通知</text>发送给您，请允许小程序进行消息订阅</view>
+<view class="text"><text>▲</text> 届时您也可以直接打开小程序进行<text>结果查询和预约面试时间</text></view>
+
+<view class="button" bindtap="message">接收审核结果通知</view>
+
+<l-dialog
+  show="{{subscribeSucceed}}"
+  type="alert"
+  title="订阅成功"
+  content="轻按确定返回首页"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="switch2Index" />
+
+<l-dialog
+  show="{{subscribeFailed}}"
+  type="alert"
+  title="问题出现"
+  content="请允许消息订阅以获得审核结果通知"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm" />

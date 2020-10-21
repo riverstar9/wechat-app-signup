@@ -12,6 +12,18 @@
 </view>
 
 <l-steps direction="column" dot="{{true}}" color="#ffb400">
+  <l-step title="开始2.0版本设计 2020.10.21" />
+  <l-step title="0.9.0 2020.10.16">
+    <view class="container" slot="describe">
+      <view>1.修复了可能无法提交面试时间的bug</view>
+      <view>2.调整了关于页的内容</view>
+    </view>
+  </l-step>
+  <l-step title="0.8.0 2020.10.15">
+    <view class="container" slot="describe">
+      <view>1.修复了无法提交报名信息的bug</view>
+    </view>
+  </l-step>
   <l-step title="0.7.0 2020.10.13">
     <view class="container" slot="describe">
       <view>1.新增了好多条欢迎页文案</view>

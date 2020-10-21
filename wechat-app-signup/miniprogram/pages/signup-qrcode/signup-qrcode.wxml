@@ -9,7 +9,28 @@
 <view class="text"><text>●</text> 二维码推荐<text>长按保存</text>，您也可以<text>在首页轻按头像</text>重新获取</view>
 <view class="text"><text>●</text> 二维码中含有隐私信息，<text>请不要分享给他人</text></view>
 
-<view class="button" bindtap="switch2Index">回到首页</view>
+<view class="button" bindtap="message">接收审核结果通知</view>
+
+<l-dialog
+  show="{{subscribeSucceed}}"
+  type="alert"
+  title="订阅成功"
+  content="轻按确定返回首页"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm"
+  bind:linconfirm="switch2Index" />
+
+<l-dialog
+  show="{{subscribeFailed}}"
+  type="alert"
+  title="问题出现"
+  content="请允许消息订阅以获得审核结果通知"
+  l-class="dialog"
+  l-title-class="dialog-title"
+  l-content-class="dialog-content"
+  l-confirm-class="dialog-confirm" />
 
 <l-mask show="{{showMask}}" opacity="0.6" center="{{true}}">
   <l-loading show="{{showLoading}}" size="large" color="#fee183" full-screen="{{true}}" bg-color="transparent"></l-loading>
@@ -38,14 +59,14 @@
     l-content-class="dialog-content"
     l-confirm-class="dialog-confirm"
     bind:linconfirm="closeMask" />
-    <l-dialog
-      show="{{authorizeFailed}}"
-      type="alert"
-      title="问题出现"
-      content="需要获取相册访问权限，请到轻按确定进行授权"
-      l-class="dialog"
-      l-title-class="dialog-title"
-      l-content-class="dialog-content"
-      l-confirm-class="dialog-confirm"
-      bind:linconfirm="authorize" />
+  <l-dialog
+    show="{{authorizeFailed}}"
+    type="alert"
+    title="问题出现"
+    content="需要获取相册访问权限，请到轻按确定进行授权"
+    l-class="dialog"
+    l-title-class="dialog-title"
+    l-content-class="dialog-content"
+    l-confirm-class="dialog-confirm"
+    bind:linconfirm="authorize" />
 </l-mask>
